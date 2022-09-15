@@ -4,11 +4,22 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:MeallyApp"
-    Shell.FlyoutBehavior="Disabled">
+    Shell.TabBarIsVisible="False"
+    BackgroundColor="#FFC439"
+    FlyoutBackgroundColor="#FFC439">
+
+    <Shell.FlyoutHeader>
+        <Label Text="Meally" FontSize="50" HorizontalOptions="Center" VerticalOptions="Center" Margin="0,25,0,25"/>
+    </Shell.FlyoutHeader>
 
     <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
+            Title="Main"
+            ContentTemplate="{DataTemplate local:MainPage}"
+            Route="MainPage" />
+
+    <ShellContent
+        Title="About"
+        ContentTemplate="{DataTemplate local:AboutPage}"
+        Route="AboutPage" />
 
 </Shell>

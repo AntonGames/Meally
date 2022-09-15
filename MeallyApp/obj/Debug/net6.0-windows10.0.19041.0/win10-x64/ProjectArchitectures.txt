@@ -1,0 +1,1 @@
+C:\Users\Lorry\Desktop\Meally\MeallyApp\MeallyApp\MeallyApp.csproj;x64

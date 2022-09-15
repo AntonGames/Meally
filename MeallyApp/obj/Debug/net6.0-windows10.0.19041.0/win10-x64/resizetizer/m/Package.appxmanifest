@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10" xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10" xmlns:rescap="http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabilities" IgnorableNamespaces="uap rescap">
-  <Identity Name="F16E5DCC-8685-42C8-9FDE-764174AEB4BE" Publisher="CN=User Name" Version="1.0.0.1" />
+  <Identity Name="D4348B90-68F5-4F72-9554-034A7C109822" Publisher="CN=User Name" Version="1.0.0.1" />
   <Properties>
     <DisplayName>MeallyApp</DisplayName>
     <PublisherDisplayName>User Name</PublisherDisplayName>

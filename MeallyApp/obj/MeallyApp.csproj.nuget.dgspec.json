@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Lorry\\Documents\\Programavimas\\MeallyApp\\MeallyApp\\MeallyApp.csproj": {}
+    "C:\\Users\\Lorry\\Desktop\\Meally\\MeallyApp\\MeallyApp\\MeallyApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Lorry\\Documents\\Programavimas\\MeallyApp\\MeallyApp\\MeallyApp.csproj": {
+    "C:\\Users\\Lorry\\Desktop\\Meally\\MeallyApp\\MeallyApp\\MeallyApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Lorry\\Documents\\Programavimas\\MeallyApp\\MeallyApp\\MeallyApp.csproj",
+        "projectUniqueName": "C:\\Users\\Lorry\\Desktop\\Meally\\MeallyApp\\MeallyApp\\MeallyApp.csproj",
         "projectName": "MeallyApp",
-        "projectPath": "C:\\Users\\Lorry\\Documents\\Programavimas\\MeallyApp\\MeallyApp\\MeallyApp.csproj",
+        "projectPath": "C:\\Users\\Lorry\\Desktop\\Meally\\MeallyApp\\MeallyApp\\MeallyApp.csproj",
         "packagesPath": "C:\\Users\\Lorry\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Lorry\\Documents\\Programavimas\\MeallyApp\\MeallyApp\\obj\\",
+        "outputPath": "C:\\Users\\Lorry\\Desktop\\Meally\\MeallyApp\\MeallyApp\\obj\\",
         "projectStyle": "PackageReference",
         "crossTargeting": true,
         "fallbackFolders": [
