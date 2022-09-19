@@ -1,24 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Drako\\source\\repos\\AntonGames\\Meally\\MeallyApp\\MeallyApp.csproj": {}
+    "C:\\Users\\Gustas\\Documents\\.NET\\MeallyApp\\MeallyApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Drako\\source\\repos\\AntonGames\\Meally\\MeallyApp\\MeallyApp.csproj": {
+    "C:\\Users\\Gustas\\Documents\\.NET\\MeallyApp\\MeallyApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Drako\\source\\repos\\AntonGames\\Meally\\MeallyApp\\MeallyApp.csproj",
+        "projectUniqueName": "C:\\Users\\Gustas\\Documents\\.NET\\MeallyApp\\MeallyApp.csproj",
         "projectName": "MeallyApp",
-        "projectPath": "C:\\Users\\Drako\\source\\repos\\AntonGames\\Meally\\MeallyApp\\MeallyApp.csproj",
-        "packagesPath": "C:\\Users\\Drako\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Drako\\source\\repos\\AntonGames\\Meally\\MeallyApp\\obj\\",
+        "projectPath": "C:\\Users\\Gustas\\Documents\\.NET\\MeallyApp\\MeallyApp.csproj",
+        "packagesPath": "C:\\Users\\Gustas\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Gustas\\Documents\\.NET\\MeallyApp\\obj\\",
         "projectStyle": "PackageReference",
         "crossTargeting": true,
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Drako\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Gustas\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
