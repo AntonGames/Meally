@@ -5,13 +5,44 @@
 
     <StackLayout Spacing="10">
 
-        <Entry x:Name="IngEntry" Placeholder="Enter ingredient" ClearButtonVisibility="WhileEditing" ReturnType="Done" HorizontalOptions="Center" VerticalOptions="Center" Margin="0,25,0,0"/>
+        <Entry x:Name="IngEntry" 
+               Placeholder="Enter ingredient" 
+               ClearButtonVisibility="WhileEditing" 
+               ReturnType="Done" 
+               HorizontalOptions="Center" 
+               VerticalOptions="Center" 
+               Margin="0,25,0,0"/>
 
-        <BoxView Color="#D9D9D9" CornerRadius="10" WidthRequest="300" HeightRequest="200" VerticalOptions="Center" HorizontalOptions="Center" />
+        <BoxView Color="#D9D9D9" 
+                 CornerRadius="10" 
+                 WidthRequest="300" 
+                 HeightRequest="200" 
+                 VerticalOptions="Center" 
+                 HorizontalOptions="Center" />
 
-        <Button x:Name="AddButton" Text="Add" TextColor="#231F20" CornerRadius="10" BackgroundColor="#FFC439" Margin="100,50,100,0" Clicked="AddButton_OnClicked"/>
+        <Button x:Name="AddButton" 
+                Text="Add" TextColor="#231F20" 
+                CornerRadius="10" 
+                BackgroundColor="#FFC439" 
+                Margin="100,50,100,0" 
+                Clicked="AddButton_OnClicked"/>
 
-        <Button x:Name="LoadButton" Text="Load" TextColor="#231F20" CornerRadius="10" BackgroundColor="#FFC439" Margin="100,25,100,0" Clicked="LoadButton_OnClicked"/>
+        <Button x:Name="LoadButton" 
+                Text="Load" 
+                TextColor="#231F20" 
+                CornerRadius="10" 
+                BackgroundColor="#FFC439"
+                Margin="100,25,100,0" 
+                Clicked="LoadButton_OnClicked"/>
+
+        <Button x:Name="DeleteButton" 
+                Text="Delete" 
+                TextColor="#231F20" 
+                CornerRadius="10" 
+                BackgroundColor="#FFC439"
+                Margin="100,25,100,0" 
+                Clicked="DeleteButton_OnClicked"/>
+
 
     </StackLayout>
 

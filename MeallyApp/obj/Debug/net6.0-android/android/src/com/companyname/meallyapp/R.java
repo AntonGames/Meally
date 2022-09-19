@@ -11829,10 +11829,6 @@ public final class R {
     public static final int appicon_background=0x7f0d0001;
     public static final int appicon_foreground=0x7f0d0002;
     public static final int appicon_round=0x7f0d0003;
-    public static final int menu_icon=0x7f0d0004;
-    public static final int menu_icon_background=0x7f0d0005;
-    public static final int menu_icon_foreground=0x7f0d0006;
-    public static final int menu_icon_round=0x7f0d0007;
   }
   public static final class plurals {
     public static final int mtrl_badge_content_description=0x7f0e0000;
