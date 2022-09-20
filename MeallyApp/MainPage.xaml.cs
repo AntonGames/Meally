@@ -1,27 +1,33 @@
-﻿namespace MeallyApp;
+﻿using Java.Security;
+using System.Collections.ObjectModel;
+
+namespace MeallyApp;
 
 public partial class MainPage : ContentPage
 {
     private string _fileName = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "ingredients.txt");
 
+    private ObservableCollection<String> Products = new ObservableCollection<string>();
+ 
     public MainPage()
     {
+        //Products = ProductManager.GetProducts();
         InitializeComponent();
     }
 
-
-
-    public void clearEntryText(Entry EntryObj)
+    public void ClearEntryText(Entry EntryObj)
     {
         Console.WriteLine("Text Cleared!");
         EntryObj.Text = "";
-        
     }
 
     private void AddButton_OnClicked(object sender, EventArgs e)
     {
-        File.AppendAllText(_fileName, IngEntry.Text + Environment.NewLine);
-        clearEntryText(IngEntry);
+        if (!string.IsNullOrWhiteSpace(IngEntry.Text))
+        {
+            File.AppendAllText(_fileName, IngEntry.Text + Environment.NewLine);
+        }
+        ClearEntryText(IngEntry);
     }
 
     private void LoadButton_OnClicked(object sender, EventArgs e)
@@ -32,7 +38,9 @@ public partial class MainPage : ContentPage
             foreach(string line in buffer)
             {
                 Console.WriteLine(line);
+                Products.Add(line);
             }
+            lvProduct.ItemsSource = Products;
         }
     }
 
