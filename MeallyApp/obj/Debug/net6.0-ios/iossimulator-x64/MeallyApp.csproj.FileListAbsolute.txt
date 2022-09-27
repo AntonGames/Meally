@@ -816,4 +816,3 @@ C:\Users\Gustas\Documents\Meally\MeallyApp\obj\Debug\net6.0-ios\iossimulator-x64
 C:\Users\Gustas\Documents\Meally\MeallyApp\obj\Debug\net6.0-ios\iossimulator-x64\resizetizer\f\MauiInfo.plist
 C:\Users\Gustas\Documents\Meally\MeallyApp\obj\Debug\net6.0-ios\iossimulator-x64\resizetizer\f\OpenSans-Regular.ttf
 C:\Users\Gustas\Documents\Meally\MeallyApp\obj\Debug\net6.0-ios\iossimulator-x64\resizetizer\f\OpenSans-Semibold.ttf
-C:\Users\Gustas\Documents\Meally\MeallyApp\obj\Debug\net6.0-ios\iossimulator-x64\build-signature\signature
