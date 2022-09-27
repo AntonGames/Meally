@@ -1,4 +1,4 @@
-﻿using Java.Security;
+﻿using MeallyApp.Resources.ViewIngredients;
 using System.Collections.ObjectModel;
 
 namespace MeallyApp;
@@ -6,13 +6,11 @@ namespace MeallyApp;
 public partial class MainPage : ContentPage
 {
     private string _fileName = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "ingredients.txt");
-
-    private ObservableCollection<String> Products = new ObservableCollection<string>();
  
-    public MainPage()
+    public MainPage(IngredientsViewModel viewModel)
     {
-        //Products = ProductManager.GetProducts();
         InitializeComponent();
+        BindingContext = viewModel;
     }
 
     public void ClearEntryText(Entry EntryObj)
@@ -23,11 +21,7 @@ public partial class MainPage : ContentPage
 
     private void AddButton_OnClicked(object sender, EventArgs e)
     {
-        if (!string.IsNullOrWhiteSpace(IngEntry.Text))
-        {
-            File.AppendAllText(_fileName, IngEntry.Text + Environment.NewLine);
-        }
-        ClearEntryText(IngEntry);
+       
     }
 
     private void LoadButton_OnClicked(object sender, EventArgs e)
@@ -38,9 +32,7 @@ public partial class MainPage : ContentPage
             foreach(string line in buffer)
             {
                 Console.WriteLine(line);
-                Products.Add(line);
             }
-            lvProduct.ItemsSource = Products;
         }
     }
 
@@ -50,8 +42,6 @@ public partial class MainPage : ContentPage
         {
             File.Delete(_fileName);
         }
-
-        IngEntry.Text = string.Empty;
     }
 }
 

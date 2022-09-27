@@ -1,52 +1,45 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:MeallyApp"
+             xmlns:model="clr-namespace:MeallyApp.Resources.Ingredients"
+             xmlns:viewmodel="clr-namespace:MeallyApp.Resources.ViewIngredients"
+             x:DataType="viewmodel:IngredientsViewModel"
+             Title="{Binding Title}"
              x:Class="MeallyApp.MainPage">
+    
+    <Grid ColumnDefinitions="*,*"
+              ColumnSpacing="5"
+              RowDefinitions="*,100"
+              RowSpacing="0"
+              Padding="10">
+        <Frame HeightRequest="300"
+               Grid.ColumnSpan="2">
+        <CollectionView BackgroundColor="Pink"
+                        Grid.ColumnSpan="2"
+                        ItemsSource="{Binding IngredientsCollection}"
+                        SelectionMode="Multiple">
+            <CollectionView.ItemTemplate>
+                <DataTemplate x:DataType="model:Ingredient">
+                    <Grid Padding="10">
+                        <Frame HeightRequest="125"
+                               BackgroundColor="#FFC439">
+                            <Label Text="{Binding Name}" TextColor="Black"/>
+                        </Frame>
+                    </Grid>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
 
-    <StackLayout Spacing="10">
-
-        <Entry x:Name="IngEntry" 
-               Placeholder="Enter ingredient" 
-               ClearButtonVisibility="WhileEditing" 
-               ReturnType="Done" 
-               HorizontalOptions="Center" 
-               VerticalOptions="Center" 
-               Margin="0,25,0,0"/>
-
-        <Frame  CornerRadius="10" 
-                WidthRequest="300" 
-                HeightRequest="200" 
-                VerticalOptions="Center" 
-                HorizontalOptions="Center">
-
-            <ListView x:Name="lvProduct"/>
+        </CollectionView>
         </Frame>
-
+        
         <Button x:Name="AddButton" 
+                Grid.Row="1"
+                Margin="8"
                 Text="Add" TextColor="#231F20" 
                 CornerRadius="10" 
                 BackgroundColor="#FFC439" 
-                Margin="100,50,100,0" 
                 Clicked="AddButton_OnClicked"/>
-
-        <Button x:Name="LoadButton" 
-                Text="Load" 
-                TextColor="#231F20" 
-                CornerRadius="10" 
-                BackgroundColor="#FFC439"
-                Margin="100,25,100,0" 
-                Clicked="LoadButton_OnClicked"/>
-
-        <Button x:Name="DeleteButton" 
-                Text="Delete" 
-                TextColor="#231F20" 
-                CornerRadius="10" 
-                BackgroundColor="#FFC439"
-                Margin="100,25,100,0" 
-                Clicked="DeleteButton_OnClicked"/>
-
-
-    </StackLayout>
+    </Grid>
+    
 
 </ContentPage>
