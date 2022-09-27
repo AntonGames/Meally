@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Gustas\\Documents\\.NET\\MeallyApp\\MeallyApp.csproj": {}
+    "C:\\Users\\Gustas\\Documents\\Meally\\MeallyApp\\MeallyApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Gustas\\Documents\\.NET\\MeallyApp\\MeallyApp.csproj": {
+    "C:\\Users\\Gustas\\Documents\\Meally\\MeallyApp\\MeallyApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Gustas\\Documents\\.NET\\MeallyApp\\MeallyApp.csproj",
+        "projectUniqueName": "C:\\Users\\Gustas\\Documents\\Meally\\MeallyApp\\MeallyApp.csproj",
         "projectName": "MeallyApp",
-        "projectPath": "C:\\Users\\Gustas\\Documents\\.NET\\MeallyApp\\MeallyApp.csproj",
+        "projectPath": "C:\\Users\\Gustas\\Documents\\Meally\\MeallyApp\\MeallyApp.csproj",
         "packagesPath": "C:\\Users\\Gustas\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Gustas\\Documents\\.NET\\MeallyApp\\obj\\",
+        "outputPath": "C:\\Users\\Gustas\\Documents\\Meally\\MeallyApp\\obj\\",
         "projectStyle": "PackageReference",
         "crossTargeting": true,
         "fallbackFolders": [

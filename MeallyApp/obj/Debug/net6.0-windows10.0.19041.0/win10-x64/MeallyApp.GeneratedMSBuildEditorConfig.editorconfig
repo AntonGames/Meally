@@ -7,39 +7,39 @@ build_property.InvariantGlobalization =
 build_property.PlatformNeutralAssembly = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = MeallyApp
-build_property.ProjectDir = C:\Users\Gustas\Documents\.NET\MeallyApp\
+build_property.ProjectDir = C:\Users\Gustas\Documents\Meally\MeallyApp\
 
-[C:/Users/Gustas/Documents/.NET/MeallyApp/AboutPage.xaml]
+[C:/Users/Gustas/Documents/Meally/MeallyApp/AboutPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = MeallyApp.AboutPage.xaml
 build_metadata.AdditionalFiles.TargetPath = AboutPage.xaml
 build_metadata.AdditionalFiles.RelativePath = AboutPage.xaml
 
-[C:/Users/Gustas/Documents/.NET/MeallyApp/App.xaml]
+[C:/Users/Gustas/Documents/Meally/MeallyApp/App.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = MeallyApp.App.xaml
 build_metadata.AdditionalFiles.TargetPath = App.xaml
 build_metadata.AdditionalFiles.RelativePath = App.xaml
 
-[C:/Users/Gustas/Documents/.NET/MeallyApp/AppShell.xaml]
+[C:/Users/Gustas/Documents/Meally/MeallyApp/AppShell.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = MeallyApp.AppShell.xaml
 build_metadata.AdditionalFiles.TargetPath = AppShell.xaml
 build_metadata.AdditionalFiles.RelativePath = AppShell.xaml
 
-[C:/Users/Gustas/Documents/.NET/MeallyApp/MainPage.xaml]
+[C:/Users/Gustas/Documents/Meally/MeallyApp/MainPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = MeallyApp.MainPage.xaml
 build_metadata.AdditionalFiles.TargetPath = MainPage.xaml
 build_metadata.AdditionalFiles.RelativePath = MainPage.xaml
 
-[C:/Users/Gustas/Documents/.NET/MeallyApp/Resources/Styles/Colors.xaml]
+[C:/Users/Gustas/Documents/Meally/MeallyApp/Resources/Styles/Colors.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = MeallyApp.Resources.Styles.Colors.xaml
 build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Colors.xaml
 build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Colors.xaml
 
-[C:/Users/Gustas/Documents/.NET/MeallyApp/Resources/Styles/Styles.xaml]
+[C:/Users/Gustas/Documents/Meally/MeallyApp/Resources/Styles/Styles.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = MeallyApp.Resources.Styles.Styles.xaml
 build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "YWRF6/v/qLftSaOiP+Kv3KY5luiAfLfu3mXPCCwaocTu+SPC/dDisgr2fp1AaCrktuUysmNfDjGOgZmechRhKw==",
+  "dgSpecHash": "O1zKxwUZLUfUwOpEWnXJrhMH60ZfRKIgiKUc8lkcA8BCzjP2IyOJY3ySLfUMD0rDpayS2e4pxaQzhdrgM+DUSw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Gustas\\Documents\\.NET\\MeallyApp\\MeallyApp.csproj",
+  "projectFilePath": "C:\\Users\\Gustas\\Documents\\Meally\\MeallyApp\\MeallyApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Gustas\\.nuget\\packages\\googlegson\\2.9.0.1\\googlegson.2.9.0.1.nupkg.sha512",
     "C:\\Users\\Gustas\\.nuget\\packages\\microsoft.extensions.configuration\\6.0.1\\microsoft.extensions.configuration.6.0.1.nupkg.sha512",
