@@ -19,7 +19,6 @@ public partial class MainPage : ContentPage
     private void AddButton_OnClicked(object sender, EventArgs e)
     {
         selection.Clear();
-        Console.WriteLine("Method Called");
 
         if (IngridientView.SelectedItems != null)
         {
@@ -40,6 +39,7 @@ public partial class MainPage : ContentPage
 
             /*
             // Used for individual item selection casting
+            // Change IngridientView.SelectedItems to IngridientView.SelectedItem
             object o = new Ingredient();
             o = (IngridientView.SelectedItem); 
             Ingredient selection = o as Ingredient;
