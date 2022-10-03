@@ -1,1 +1,1 @@
-C:\Users\Gustas\Documents\Meally\MeallyApp\MeallyApp.csproj;x64
+C:\Users\Lorry\Documents\GitHub\Meally\MeallyApp\MeallyApp.csproj;x64

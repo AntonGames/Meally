@@ -8,6 +8,8 @@ namespace MeallyApp.Resources.Ingredients
 {
     public class Ingredient
     {
+        public Ingredient() {;}
+
         public Ingredient(Ingredients ingredient, string name, string image)
         {
             this.ingredient = ingredient;
@@ -18,5 +20,8 @@ namespace MeallyApp.Resources.Ingredients
         public Ingredients ingredient { get; set; }
         public string Name { get; set; }
         public string Image { get; set; }
+
+
+
     }
 }

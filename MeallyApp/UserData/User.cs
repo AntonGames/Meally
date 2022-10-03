@@ -9,13 +9,24 @@ namespace MeallyApp.UserData
 {
     public class User
     {
-        private List<Ingredient> inventory;
+        public List<Ingredient> inventory;
 
-        public List<Ingredient> Inventory { get { return inventory; } }
+
+        public User() {;}
 
         public User(List<Ingredient> inventory)
         {
             this.inventory = inventory;
         }
+
+        public void PrintInv()
+        {
+            foreach (var ing in inventory)
+            {
+                Console.WriteLine(ing.Name);
+            }
+        }
+
+
     }
 }

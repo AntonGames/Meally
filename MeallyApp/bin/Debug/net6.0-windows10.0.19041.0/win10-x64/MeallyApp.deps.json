@@ -9,13 +9,13 @@
     ".NETCoreApp,Version=v6.0/win10-x64": {
       "MeallyApp/1.0": {
         "dependencies": {
-          "Microsoft.Maui.Dependencies": "6.0.486",
-          "Microsoft.Maui.Extensions": "6.0.486",
+          "Microsoft.Maui.Dependencies": "6.0.536",
+          "Microsoft.Maui.Extensions": "6.0.536",
           "Microsoft.Windows.SDK.BuildTools": "10.0.22000.194",
           "runtimepack.Microsoft.NETCore.App.Runtime.win-x64": "6.0.9",
-          "runtimepack.Microsoft.Maui.Core.Runtime.win": "6.0.486",
-          "runtimepack.Microsoft.Maui.Controls.Runtime.win": "6.0.486",
-          "runtimepack.Microsoft.Maui.Essentials.Runtime.win": "6.0.486",
+          "runtimepack.Microsoft.Maui.Core.Runtime.win": "6.0.536",
+          "runtimepack.Microsoft.Maui.Controls.Runtime.win": "6.0.536",
+          "runtimepack.Microsoft.Maui.Essentials.Runtime.win": "6.0.536",
           "runtimepack.Microsoft.Windows.SDK.NET.Ref": "10.0.19041.27"
         },
         "runtime": {
@@ -859,35 +859,35 @@
           }
         }
       },
-      "runtimepack.Microsoft.Maui.Core.Runtime.win/6.0.486": {
+      "runtimepack.Microsoft.Maui.Core.Runtime.win/6.0.536": {
         "runtime": {
           "Microsoft.Maui.dll": {
             "assemblyVersion": "1.0.0.0",
-            "fileVersion": "6.0.409.77"
+            "fileVersion": "6.0.536.0"
           }
         }
       },
-      "runtimepack.Microsoft.Maui.Controls.Runtime.win/6.0.486": {
+      "runtimepack.Microsoft.Maui.Controls.Runtime.win/6.0.536": {
         "runtime": {
           "Microsoft.Maui.Controls.Compatibility.dll": {
             "assemblyVersion": "1.0.0.0",
-            "fileVersion": "6.0.409.77"
+            "fileVersion": "6.0.536.0"
           },
           "Microsoft.Maui.Controls.Xaml.dll": {
             "assemblyVersion": "1.0.0.0",
-            "fileVersion": "6.0.409.77"
+            "fileVersion": "6.0.536.0"
           },
           "Microsoft.Maui.Controls.dll": {
             "assemblyVersion": "1.0.0.0",
-            "fileVersion": "6.0.409.77"
+            "fileVersion": "6.0.536.0"
           }
         }
       },
-      "runtimepack.Microsoft.Maui.Essentials.Runtime.win/6.0.486": {
+      "runtimepack.Microsoft.Maui.Essentials.Runtime.win/6.0.536": {
         "runtime": {
           "Microsoft.Maui.Essentials.dll": {
             "assemblyVersion": "1.0.0.0",
-            "fileVersion": "6.0.409.77"
+            "fileVersion": "6.0.536.0"
           }
         }
       },
@@ -1008,7 +1008,7 @@
           }
         }
       },
-      "Microsoft.Maui.Dependencies/6.0.486": {
+      "Microsoft.Maui.Dependencies/6.0.536": {
         "dependencies": {
           "Microsoft.Graphics.Win2D": "1.0.3.1",
           "Microsoft.Maui.Graphics": "6.0.403",
@@ -1016,7 +1016,7 @@
           "Microsoft.WindowsAppSDK": "1.1.3"
         }
       },
-      "Microsoft.Maui.Extensions/6.0.486": {
+      "Microsoft.Maui.Extensions/6.0.536": {
         "dependencies": {
           "Microsoft.Extensions.Configuration": "6.0.1",
           "Microsoft.Extensions.DependencyInjection": "6.0.0",
@@ -1121,17 +1121,17 @@
       "serviceable": false,
       "sha512": ""
     },
-    "runtimepack.Microsoft.Maui.Core.Runtime.win/6.0.486": {
+    "runtimepack.Microsoft.Maui.Core.Runtime.win/6.0.536": {
       "type": "runtimepack",
       "serviceable": false,
       "sha512": ""
     },
-    "runtimepack.Microsoft.Maui.Controls.Runtime.win/6.0.486": {
+    "runtimepack.Microsoft.Maui.Controls.Runtime.win/6.0.536": {
       "type": "runtimepack",
       "serviceable": false,
       "sha512": ""
     },
-    "runtimepack.Microsoft.Maui.Essentials.Runtime.win/6.0.486": {
+    "runtimepack.Microsoft.Maui.Essentials.Runtime.win/6.0.536": {
       "type": "runtimepack",
       "serviceable": false,
       "sha512": ""
@@ -1204,19 +1204,19 @@
       "path": "microsoft.graphics.win2d/1.0.3.1",
       "hashPath": "microsoft.graphics.win2d.1.0.3.1.nupkg.sha512"
     },
-    "Microsoft.Maui.Dependencies/6.0.486": {
+    "Microsoft.Maui.Dependencies/6.0.536": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-Q5EMWvTlSUDJ1i5r9WN33VtZySCARCHFiNECcfZAcdDBGYLEtFXUZvf0jkHoqQXD5zAk1A7Lqr3Oxu+cXq+ySw==",
-      "path": "microsoft.maui.dependencies/6.0.486",
-      "hashPath": "microsoft.maui.dependencies.6.0.486.nupkg.sha512"
+      "sha512": "sha512-0HkL9ufl7L/tkGRowrBygi7CmQv7LC3lGYhxJsVkP7Q4OKV/NWKhg0AQKsskwNvG0aDfkJ5YgFd30aSRAHTyJg==",
+      "path": "microsoft.maui.dependencies/6.0.536",
+      "hashPath": "microsoft.maui.dependencies.6.0.536.nupkg.sha512"
     },
-    "Microsoft.Maui.Extensions/6.0.486": {
+    "Microsoft.Maui.Extensions/6.0.536": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-8EQXAfavgMphismIN2LRWeHpZFN7RMZiWEZG1Z+ylfSpkp1XlYvd1CEagkcbe/IyXVtGgkkEfaPVwj8xJS1D6g==",
-      "path": "microsoft.maui.extensions/6.0.486",
-      "hashPath": "microsoft.maui.extensions.6.0.486.nupkg.sha512"
+      "sha512": "sha512-jhtELYRFKT5nJDwbrCMD6n9EwxhS6P0MbG8i3tU3W7nqqswmaF7DfCUtd4ZrYthJIVnUiftqN069WlXl/dT2Gw==",
+      "path": "microsoft.maui.extensions/6.0.536",
+      "hashPath": "microsoft.maui.extensions.6.0.536.nupkg.sha512"
     },
     "Microsoft.Maui.Graphics/6.0.403": {
       "type": "package",

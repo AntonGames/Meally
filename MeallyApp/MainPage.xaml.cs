@@ -1,46 +1,50 @@
 ﻿using MeallyApp.Resources.ViewIngredients;
-using System.Collections.ObjectModel;
+using MeallyApp.Resources.Ingredients;
+using MeallyApp.UserData;
 
 namespace MeallyApp;
 
 public partial class MainPage : ContentPage
 {
     private string _fileName = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "ingredients.txt");
- 
+
+    private List<Ingredient> selection = new List<Ingredient>();
+    public User user = new User();
+
     public MainPage(IngredientsViewModel viewModel)
     {
         InitializeComponent();
         BindingContext = viewModel;
     }
-
-    public void ClearEntryText(Entry EntryObj)
-    {
-        Console.WriteLine("Text Cleared!");
-        EntryObj.Text = "";
-    }
-
     private void AddButton_OnClicked(object sender, EventArgs e)
     {
-       
-    }
+        selection.Clear();
+        Console.WriteLine("Method Called");
 
-    private void LoadButton_OnClicked(object sender, EventArgs e)
-    {
-        if (File.Exists(_fileName)) 
+        if (IngridientView.SelectedItems != null)
         {
-            string[] buffer = File.ReadAllLines(_fileName);
-            foreach(string line in buffer)
+            // CollectionView returns IList<object>, code below casts IList<object> to List<Ingredients>
+            object tempObject = new Ingredient();
+
+            foreach (var o in IngridientView.SelectedItems)
             {
-                Console.WriteLine(line);
+                tempObject = o;
+                selection.Add(tempObject as Ingredient);
             }
-        }
-    }
 
-    private void DeleteButton_OnClicked(object sender, EventArgs e)
-    {
-        if (File.Exists(_fileName))
-        {
-            File.Delete(_fileName);
+            // Assign inventory and clear selection
+            user.inventory = selection;
+            IngridientView.SelectedItems.Clear();
+
+            user.PrintInv();
+
+            /*
+            // Used for individual item selection casting
+            object o = new Ingredient();
+            o = (IngridientView.SelectedItem); 
+            Ingredient selection = o as Ingredient;
+            Console.WriteLine("Selected item is {0}", selection.Name);
+            */
         }
     }
 }
