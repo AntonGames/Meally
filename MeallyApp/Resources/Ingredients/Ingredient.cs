@@ -1,4 +1,6 @@
-﻿namespace MeallyApp.Resources.Ingredients
+﻿using System.Text.RegularExpressions;
+
+namespace MeallyApp.Resources.Ingredients
 {
     public class Ingredient
     {
@@ -15,7 +17,7 @@
 
         public override string ToString()
         {
-            return ingredient.ToString();
+            return Regex.Replace(ingredient.ToString(), "[a-z][A-Z]", m => $"{m.Value[0]} {char.ToLower(m.Value[1])}");
         }
 
     }
