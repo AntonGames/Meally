@@ -8,7 +8,7 @@
           RowDefinitions="150,100">
 
         <Frame BackgroundColor="#F5F5F5" HeightRequest="150" Grid.ColumnSpan="2" Grid.Row="0">
-        <Label x:Name="TempText" TextColor="Black" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+            <Label x:Name="TempText" TextColor="Black" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
         </Frame>
 
         <Button x:Name="AddButton"

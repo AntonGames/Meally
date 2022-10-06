@@ -1790,3 +1790,4 @@ C:\Users\Lorry\Documents\GitHub\Meally\MeallyApp\obj\Debug\net6.0-windows10.0.19
 C:\Users\Lorry\Documents\GitHub\Meally\MeallyApp\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\MultipleQualifiersPerDimensionFound.txt
 C:\Users\Lorry\Documents\GitHub\Meally\MeallyApp\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\ProjectArchitectures.txt
 C:\Users\Lorry\Documents\GitHub\Meally\MeallyApp\bin\Debug\net6.0-windows10.0.19041.0\win10-x64\mscordaccore_amd64_amd64_6.0.922.41905.dll
+C:\Users\Lorry\Documents\GitHub\Meally\MeallyApp\bin\Debug\net6.0-windows10.0.19041.0\win10-x64\Newtonsoft.Json.dll

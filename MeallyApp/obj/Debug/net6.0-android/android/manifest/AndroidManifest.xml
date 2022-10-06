@@ -10,6 +10,7 @@
   <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
   <uses-permission android:name="android.permission.INTERNET" />
   <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+  <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
   <application android:name="crc64b15f7f0e353876d0.MainApplication" android:allowBackup="true" android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:debuggable="true" android:extractNativeLibs="true" android:icon="@mipmap/appicon" android:label="MeallyApp" android:roundIcon="@mipmap/appicon_round" android:supportsRtl="true">
     <activity android:name="crc64b15f7f0e353876d0.MainActivity" android:configChanges="density|orientation|smallestScreenSize|screenLayout|screenSize|uiMode" android:exported="true" android:theme="@style/Maui.SplashTheme">
       <intent-filter>

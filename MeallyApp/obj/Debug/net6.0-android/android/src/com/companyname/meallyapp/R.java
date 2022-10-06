@@ -11086,12 +11086,13 @@ public final class R {
     public static final int notification_template_icon_low_bg=0x7f07009a;
     public static final int notification_tile_bg=0x7f07009b;
     public static final int notify_panel_notification_icon_bg=0x7f07009c;
-    public static final int png_icon=0x7f07009d;
-    public static final int splash=0x7f07009e;
-    public static final int test_custom_background=0x7f07009f;
-    public static final int test_level_drawable=0x7f0700a0;
-    public static final int tooltip_frame_dark=0x7f0700a1;
-    public static final int tooltip_frame_light=0x7f0700a2;
+    public static final int placeholder=0x7f07009d;
+    public static final int png_icon=0x7f07009e;
+    public static final int splash=0x7f07009f;
+    public static final int test_custom_background=0x7f0700a0;
+    public static final int test_level_drawable=0x7f0700a1;
+    public static final int tooltip_frame_dark=0x7f0700a2;
+    public static final int tooltip_frame_light=0x7f0700a3;
   }
   public static final class id {
     public static final int ALT=0x7f080000;
@@ -11829,6 +11830,10 @@ public final class R {
     public static final int appicon_background=0x7f0d0001;
     public static final int appicon_foreground=0x7f0d0002;
     public static final int appicon_round=0x7f0d0003;
+    public static final int no_effect=0x7f0d0004;
+    public static final int no_effect_background=0x7f0d0005;
+    public static final int no_effect_foreground=0x7f0d0006;
+    public static final int no_effect_round=0x7f0d0007;
   }
   public static final class plurals {
     public static final int mtrl_badge_content_description=0x7f0e0000;

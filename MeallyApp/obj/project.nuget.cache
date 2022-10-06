@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "sUIl6zgJ84DRMHyBufYmc45c0dyuJzOtBvv8gX5SN2thafYxiImG70xVPyexHIayMQyiJkBEehLUDW0McU/hYA==",
+  "dgSpecHash": "RKDw1DKdiUgc38Ca9FwpLkLfwJ5lxly6h7HBWsEVyRmQlCcg4DDY5XJjqc5is2rOheBK2NwOTc1MLrHZ7cuocw==",
   "success": true,
   "projectFilePath": "C:\\Users\\Lorry\\Documents\\GitHub\\Meally\\MeallyApp\\MeallyApp.csproj",
   "expectedPackageFiles": [
@@ -20,6 +20,7 @@
     "C:\\Users\\Lorry\\.nuget\\packages\\microsoft.maui.graphics.win2d.winui.desktop\\6.0.403\\microsoft.maui.graphics.win2d.winui.desktop.6.0.403.nupkg.sha512",
     "C:\\Users\\Lorry\\.nuget\\packages\\microsoft.windows.sdk.buildtools\\10.0.22000.194\\microsoft.windows.sdk.buildtools.10.0.22000.194.nupkg.sha512",
     "C:\\Users\\Lorry\\.nuget\\packages\\microsoft.windowsappsdk\\1.1.3\\microsoft.windowsappsdk.1.1.3.nupkg.sha512",
+    "C:\\Users\\Lorry\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
     "C:\\Users\\Lorry\\.nuget\\packages\\system.diagnostics.diagnosticsource\\6.0.0\\system.diagnostics.diagnosticsource.6.0.0.nupkg.sha512",
     "C:\\Users\\Lorry\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
     "C:\\Users\\Lorry\\.nuget\\packages\\system.runtime.interopservices.nfloat.internal\\6.0.1\\system.runtime.interopservices.nfloat.internal.6.0.1.nupkg.sha512",

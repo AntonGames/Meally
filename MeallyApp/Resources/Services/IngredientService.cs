@@ -1,10 +1,4 @@
 ﻿using MeallyApp.Resources.Ingredients;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Security.Cryptography;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MeallyApp.Resources.Services
 {
@@ -14,34 +8,35 @@ namespace MeallyApp.Resources.Services
 
         public IngredientService()
         {
-            ingredientList.Add(new Ingredient(Ingredients.Ingredients.Spaghetti, "Spaghetti", "IMG"));
-            ingredientList.Add(new Ingredient(Ingredients.Ingredients.Butter, "Butter", "IMG"));
-            ingredientList.Add(new Ingredient(Ingredients.Ingredients.Cheese, "Cheese", "IMG"));
-            ingredientList.Add(new Ingredient(Ingredients.Ingredients.Pepper, "Pepper", "IMG"));
-            ingredientList.Add(new Ingredient(Ingredients.Ingredients.CasterSugar, "Caster sugar", "IMG"));
-            ingredientList.Add(new Ingredient(Ingredients.Ingredients.Flour, "Flour", "IMG"));
-            ingredientList.Add(new Ingredient(Ingredients.Ingredients.Eggs, "Eggs", "IMG"));
-            ingredientList.Add(new Ingredient(Ingredients.Ingredients.Lemon, "Lemon", "IMG"));
-            ingredientList.Add(new Ingredient(Ingredients.Ingredients.VanillaEssence, "Vanilla essence", "IMG"));
-            ingredientList.Add(new Ingredient(Ingredients.Ingredients.LemonCurd, "Lemon curd", "IMG"));
-            ingredientList.Add(new Ingredient(Ingredients.Ingredients.OliveOil, "Olive oil", "IMG"));
-            ingredientList.Add(new Ingredient(Ingredients.Ingredients.Bacon, "Bacon", "IMG"));
-            ingredientList.Add(new Ingredient(Ingredients.Ingredients.Onion, "Onion", "IMG"));
-            ingredientList.Add(new Ingredient(Ingredients.Ingredients.Celery, "Celery", "IMG"));
-            ingredientList.Add(new Ingredient(Ingredients.Ingredients.Carrot, "Carrot", "IMG"));
-            ingredientList.Add(new Ingredient(Ingredients.Ingredients.Beef, "Beef", "IMG"));
-            ingredientList.Add(new Ingredient(Ingredients.Ingredients.Tomatoes, "Tomatoes", "IMG"));
-            ingredientList.Add(new Ingredient(Ingredients.Ingredients.Honey, "Honey", "IMG"));
-            ingredientList.Add(new Ingredient(Ingredients.Ingredients.LasagneSheets, "Lasagne sheets", "IMG"));
-            ingredientList.Add(new Ingredient(Ingredients.Ingredients.Mozzarella, "Mozzarella", "IMG"));
-            ingredientList.Add(new Ingredient(Ingredients.Ingredients.Parmesan, "Parmesan", "IMG"));
-            ingredientList.Add(new Ingredient(Ingredients.Ingredients.CremeFraiche, "Crème fraîche", "IMG"));
-            ingredientList.Add(new Ingredient(Ingredients.Ingredients.Milk, "Milk", "IMG"));
-            ingredientList.Add(new Ingredient(Ingredients.Ingredients.Salt, "Salt", "IMG"));
-            ingredientList.Add(new Ingredient(Ingredients.Ingredients.Cucumber, " Cucumber", "IMG"));
-            ingredientList.Add(new Ingredient(Ingredients.Ingredients.Coriander, "Coriander", "IMG"));
-            ingredientList.Add(new Ingredient(Ingredients.Ingredients.Potatoes, "Potatoes", "IMG"));
-            ingredientList.Add(new Ingredient(Ingredients.Ingredients.Paprika, "Paprika", "IMG"));
+            ingredientList.Add(new Ingredient(Ingredients.Ingredients.Spaghetti, "IMG"));
+            ingredientList.Add(new Ingredient(Ingredients.Ingredients.Butter, "IMG"));
+            ingredientList.Add(new Ingredient(Ingredients.Ingredients.Garlic, "IMG"));
+            ingredientList.Add(new Ingredient(Ingredients.Ingredients.Cheese, "IMG"));
+            ingredientList.Add(new Ingredient(Ingredients.Ingredients.Pepper, "IMG"));
+            ingredientList.Add(new Ingredient(Ingredients.Ingredients.CasterSugar, "IMG"));
+            ingredientList.Add(new Ingredient(Ingredients.Ingredients.Flour, "IMG"));
+            ingredientList.Add(new Ingredient(Ingredients.Ingredients.Eggs, "IMG"));
+            ingredientList.Add(new Ingredient(Ingredients.Ingredients.Lemon,"IMG"));
+            ingredientList.Add(new Ingredient(Ingredients.Ingredients.VanillaEssence, "IMG"));
+            ingredientList.Add(new Ingredient(Ingredients.Ingredients.LemonCurd, "IMG"));
+            ingredientList.Add(new Ingredient(Ingredients.Ingredients.OliveOil, "IMG"));
+            ingredientList.Add(new Ingredient(Ingredients.Ingredients.Bacon, "IMG"));
+            ingredientList.Add(new Ingredient(Ingredients.Ingredients.Onion, "IMG"));
+            ingredientList.Add(new Ingredient(Ingredients.Ingredients.Celery,"IMG"));
+            ingredientList.Add(new Ingredient(Ingredients.Ingredients.Carrot, "IMG"));
+            ingredientList.Add(new Ingredient(Ingredients.Ingredients.Beef, "IMG"));
+            ingredientList.Add(new Ingredient(Ingredients.Ingredients.Tomatoes, "IMG"));
+            ingredientList.Add(new Ingredient(Ingredients.Ingredients.Honey, "IMG"));
+            ingredientList.Add(new Ingredient(Ingredients.Ingredients.LasagneSheets, "IMG"));
+            ingredientList.Add(new Ingredient(Ingredients.Ingredients.Mozzarella,"IMG"));
+            ingredientList.Add(new Ingredient(Ingredients.Ingredients.Parmesan, "IMG"));
+            ingredientList.Add(new Ingredient(Ingredients.Ingredients.CremeFraiche, "IMG"));
+            ingredientList.Add(new Ingredient(Ingredients.Ingredients.Milk, "IMG"));
+            ingredientList.Add(new Ingredient(Ingredients.Ingredients.Salt, "IMG"));
+            ingredientList.Add(new Ingredient(Ingredients.Ingredients.Cucumber, "IMG"));
+            ingredientList.Add(new Ingredient(Ingredients.Ingredients.Coriander, "IMG"));
+            ingredientList.Add(new Ingredient(Ingredients.Ingredients.Potatoes, "IMG"));
+            ingredientList.Add(new Ingredient(Ingredients.Ingredients.Paprika, "IMG"));
         }
 
         public async Task<List<Ingredient>> GetIngredients()

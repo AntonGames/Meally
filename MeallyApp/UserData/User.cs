@@ -1,30 +1,37 @@
 ﻿using MeallyApp.Resources.Ingredients;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MeallyApp.UserData
 {
-    public class User
+    public static class User
     {
-        public List<Ingredient> inventory;
+        public static List<Ingredient> inventory = new List<Ingredient>();
 
-
-        public User() {;}
-
-        public User(List<Ingredient> inventory)
-        {
-            this.inventory = inventory;
-        }
-
-        public void PrintInv()
+        public static void PrintInv()
         {
             foreach (var ing in inventory)
             {
-                Console.WriteLine(ing.Name);
+                Console.WriteLine(ing.ingredient.ToString());
             }
+        }
+
+        //Add ingridients to inventory (for testing purposes only)
+        public static void AddInv()
+        {
+            inventory.Add(new Ingredient(Ingredients.Spaghetti, "IMG"));
+            inventory.Add(new Ingredient(Ingredients.Butter, "IMG"));
+            inventory.Add(new Ingredient(Ingredients.Garlic, "IMG"));
+            inventory.Add(new Ingredient(Ingredients.Cheese, "IMG"));
+            inventory.Add(new Ingredient(Ingredients.Pepper, "IMG"));
+            inventory.Add(new Ingredient(Ingredients.CasterSugar, "IMG"));
+            inventory.Add(new Ingredient(Ingredients.Flour, "IMG"));
+            inventory.Add(new Ingredient(Ingredients.Eggs, "IMG"));
+            inventory.Add(new Ingredient(Ingredients.Lemon, "IMG"));
+            inventory.Add(new Ingredient(Ingredients.VanillaEssence, "IMG"));
+            inventory.Add(new Ingredient(Ingredients.LemonCurd, "IMG"));
+            inventory.Add(new Ingredient(Ingredients.OliveOil, "IMG"));
+            inventory.Add(new Ingredient(Ingredients.Bacon, "IMG"));
+            inventory.Add(new Ingredient(Ingredients.Onion, "IMG"));
+            inventory.Add(new Ingredient(Ingredients.Celery, "IMG"));
         }
 
 

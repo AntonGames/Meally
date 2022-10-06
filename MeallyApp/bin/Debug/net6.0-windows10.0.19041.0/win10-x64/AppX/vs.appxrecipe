@@ -29,25 +29,25 @@
     <AppXManifest Include="C:\Users\Lorry\Documents\GitHub\Meally\MeallyApp\bin\Debug\net6.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-10-03T21:51:10.772</Modified>
+      <Modified>2022-10-06T15:14:26.402</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Lorry\Documents\GitHub\Meally\MeallyApp\bin\Debug\net6.0-windows10.0.19041.0\win10-x64\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2022-10-03T21:51:10.162</Modified>
+      <Modified>2022-10-06T15:08:00.429</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Lorry\Documents\GitHub\Meally\MeallyApp\bin\Debug\net6.0-windows10.0.19041.0\win10-x64\MeallyApp.runtimeconfig.json">
       <PackagePath>MeallyApp.runtimeconfig.json</PackagePath>
-      <Modified>2022-10-03T21:47:10.963</Modified>
+      <Modified>2022-10-06T13:31:33.578</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Lorry\Documents\GitHub\Meally\MeallyApp\bin\Debug\net6.0-windows10.0.19041.0\win10-x64\MeallyApp.dll">
       <PackagePath>MeallyApp.dll</PackagePath>
-      <Modified>2022-10-03T21:51:08.989</Modified>
+      <Modified>2022-10-06T15:14:24.367</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Lorry\Documents\GitHub\Meally\MeallyApp\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>MeallyApp.exe</PackagePath>
-      <Modified>2022-10-03T21:51:09.000</Modified>
+      <Modified>2022-10-06T15:14:24.381</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Lorry\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.9\runtimes\win-x64\lib\net6.0\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -1053,6 +1053,10 @@
       <PackagePath>Microsoft.WindowsAppRuntime.Bootstrap.Net.dll</PackagePath>
       <Modified>2022-07-19T16:53:02.000</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Lorry\.nuget\packages\newtonsoft.json\13.0.1\lib\netstandard2.0\Newtonsoft.Json.dll">
+      <PackagePath>Newtonsoft.Json.dll</PackagePath>
+      <Modified>2021-03-17T20:03:36.000</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Lorry\.nuget\packages\microsoft.graphics.win2d\1.0.3.1\runtimes\win10-x64\native\Microsoft.Graphics.Canvas.dll">
       <PackagePath>Microsoft.Graphics.Canvas.dll</PackagePath>
       <Modified>2022-04-28T15:57:10.000</Modified>
@@ -1063,7 +1067,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Lorry\Documents\GitHub\Meally\MeallyApp\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\MeallyApp.deps.json">
       <PackagePath>MeallyApp.deps.json</PackagePath>
-      <Modified>2022-10-03T21:51:10.605</Modified>
+      <Modified>2022-10-06T15:14:26.188</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files\dotnet\packs\Microsoft.Maui.Controls.Ref.win\6.0.536\ref\net6.0-windows10.0.19041\Microsoft.Maui.Controls.Compatibility.pri">
       <PackagePath>Microsoft.Maui.Controls.Compatibility.pri</PackagePath>
@@ -1079,215 +1083,215 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Lorry\Documents\GitHub\Meally\MeallyApp\Resources\Raw\AboutAssets.txt">
       <PackagePath>AboutAssets.txt</PackagePath>
-      <Modified>2022-09-19T20:03:31.433</Modified>
+      <Modified>2022-10-04T17:25:00.116</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Lorry\Documents\GitHub\Meally\MeallyApp\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-100.png">
       <PackagePath>splashSplashScreen.scale-100.png</PackagePath>
-      <Modified>2022-09-19T20:06:00.219</Modified>
+      <Modified>2022-10-04T17:25:06.388</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Lorry\Documents\GitHub\Meally\MeallyApp\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-125.png">
       <PackagePath>splashSplashScreen.scale-125.png</PackagePath>
-      <Modified>2022-09-19T20:06:00.252</Modified>
+      <Modified>2022-10-04T17:25:06.389</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Lorry\Documents\GitHub\Meally\MeallyApp\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-150.png">
       <PackagePath>splashSplashScreen.scale-150.png</PackagePath>
-      <Modified>2022-09-19T20:06:00.279</Modified>
+      <Modified>2022-10-04T17:25:06.390</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Lorry\Documents\GitHub\Meally\MeallyApp\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-200.png">
       <PackagePath>splashSplashScreen.scale-200.png</PackagePath>
-      <Modified>2022-09-19T20:06:00.321</Modified>
+      <Modified>2022-10-04T17:25:06.390</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Lorry\Documents\GitHub\Meally\MeallyApp\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-400.png">
       <PackagePath>splashSplashScreen.scale-400.png</PackagePath>
-      <Modified>2022-09-19T20:06:00.481</Modified>
+      <Modified>2022-10-04T17:25:06.391</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Lorry\Documents\GitHub\Meally\MeallyApp\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\f\OpenSans-Regular.ttf">
       <PackagePath>OpenSans-Regular.ttf</PackagePath>
-      <Modified>2022-09-19T20:03:31.427</Modified>
+      <Modified>2022-10-04T17:25:06.324</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Lorry\Documents\GitHub\Meally\MeallyApp\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\f\OpenSans-Semibold.ttf">
       <PackagePath>OpenSans-Semibold.ttf</PackagePath>
-      <Modified>2022-09-19T20:03:31.429</Modified>
+      <Modified>2022-10-04T17:25:06.326</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Lorry\Documents\GitHub\Meally\MeallyApp\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appicon.ico">
       <PackagePath>appicon.ico</PackagePath>
-      <Modified>2022-09-19T20:06:00.528</Modified>
+      <Modified>2022-10-04T17:25:06.329</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Lorry\Documents\GitHub\Meally\MeallyApp\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-100.png">
       <PackagePath>appiconLargeTile.scale-100.png</PackagePath>
-      <Modified>2022-09-19T20:06:00.775</Modified>
+      <Modified>2022-10-04T17:25:06.329</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Lorry\Documents\GitHub\Meally\MeallyApp\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-125.png">
       <PackagePath>appiconLargeTile.scale-125.png</PackagePath>
-      <Modified>2022-09-19T20:06:00.792</Modified>
+      <Modified>2022-10-04T17:25:06.330</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Lorry\Documents\GitHub\Meally\MeallyApp\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-150.png">
       <PackagePath>appiconLargeTile.scale-150.png</PackagePath>
-      <Modified>2022-09-19T20:06:00.806</Modified>
+      <Modified>2022-10-04T17:25:06.331</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Lorry\Documents\GitHub\Meally\MeallyApp\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-200.png">
       <PackagePath>appiconLargeTile.scale-200.png</PackagePath>
-      <Modified>2022-09-19T20:06:00.832</Modified>
+      <Modified>2022-10-04T17:25:06.332</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Lorry\Documents\GitHub\Meally\MeallyApp\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-400.png">
       <PackagePath>appiconLargeTile.scale-400.png</PackagePath>
-      <Modified>2022-09-19T20:06:00.918</Modified>
+      <Modified>2022-10-04T17:25:06.333</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Lorry\Documents\GitHub\Meally\MeallyApp\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-100.png">
       <PackagePath>appiconLogo.scale-100.png</PackagePath>
-      <Modified>2022-09-19T20:06:00.544</Modified>
+      <Modified>2022-10-04T17:25:06.334</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Lorry\Documents\GitHub\Meally\MeallyApp\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-125.png">
       <PackagePath>appiconLogo.scale-125.png</PackagePath>
-      <Modified>2022-09-19T20:06:00.548</Modified>
+      <Modified>2022-10-04T17:25:06.334</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Lorry\Documents\GitHub\Meally\MeallyApp\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-150.png">
       <PackagePath>appiconLogo.scale-150.png</PackagePath>
-      <Modified>2022-09-19T20:06:00.552</Modified>
+      <Modified>2022-10-04T17:25:06.335</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Lorry\Documents\GitHub\Meally\MeallyApp\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-200.png">
       <PackagePath>appiconLogo.scale-200.png</PackagePath>
-      <Modified>2022-09-19T20:06:00.557</Modified>
+      <Modified>2022-10-04T17:25:06.335</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Lorry\Documents\GitHub\Meally\MeallyApp\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-400.png">
       <PackagePath>appiconLogo.scale-400.png</PackagePath>
-      <Modified>2022-09-19T20:06:00.563</Modified>
+      <Modified>2022-10-04T17:25:06.336</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Lorry\Documents\GitHub\Meally\MeallyApp\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-100.png">
       <PackagePath>appiconMediumTile.scale-100.png</PackagePath>
-      <Modified>2022-09-19T20:06:00.628</Modified>
+      <Modified>2022-10-04T17:25:06.337</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Lorry\Documents\GitHub\Meally\MeallyApp\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-125.png">
       <PackagePath>appiconMediumTile.scale-125.png</PackagePath>
-      <Modified>2022-09-19T20:06:00.634</Modified>
+      <Modified>2022-10-04T17:25:06.337</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Lorry\Documents\GitHub\Meally\MeallyApp\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-150.png">
       <PackagePath>appiconMediumTile.scale-150.png</PackagePath>
-      <Modified>2022-09-19T20:06:00.643</Modified>
+      <Modified>2022-10-04T17:25:06.338</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Lorry\Documents\GitHub\Meally\MeallyApp\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-200.png">
       <PackagePath>appiconMediumTile.scale-200.png</PackagePath>
-      <Modified>2022-09-19T20:06:00.653</Modified>
+      <Modified>2022-10-04T17:25:06.339</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Lorry\Documents\GitHub\Meally\MeallyApp\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-400.png">
       <PackagePath>appiconMediumTile.scale-400.png</PackagePath>
-      <Modified>2022-09-19T20:06:00.675</Modified>
+      <Modified>2022-10-04T17:25:06.339</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Lorry\Documents\GitHub\Meally\MeallyApp\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-100.png">
       <PackagePath>appiconSmallTile.scale-100.png</PackagePath>
-      <Modified>2022-09-19T20:06:00.594</Modified>
+      <Modified>2022-10-04T17:25:06.340</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Lorry\Documents\GitHub\Meally\MeallyApp\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-125.png">
       <PackagePath>appiconSmallTile.scale-125.png</PackagePath>
-      <Modified>2022-09-19T20:06:00.598</Modified>
+      <Modified>2022-10-04T17:25:06.341</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Lorry\Documents\GitHub\Meally\MeallyApp\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-150.png">
       <PackagePath>appiconSmallTile.scale-150.png</PackagePath>
-      <Modified>2022-09-19T20:06:00.604</Modified>
+      <Modified>2022-10-04T17:25:06.343</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Lorry\Documents\GitHub\Meally\MeallyApp\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-200.png">
       <PackagePath>appiconSmallTile.scale-200.png</PackagePath>
-      <Modified>2022-09-19T20:06:00.611</Modified>
+      <Modified>2022-10-04T17:25:06.344</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Lorry\Documents\GitHub\Meally\MeallyApp\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-400.png">
       <PackagePath>appiconSmallTile.scale-400.png</PackagePath>
-      <Modified>2022-09-19T20:06:00.622</Modified>
+      <Modified>2022-10-04T17:25:06.344</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Lorry\Documents\GitHub\Meally\MeallyApp\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-100.png">
       <PackagePath>appiconStoreLogo.scale-100.png</PackagePath>
-      <Modified>2022-09-19T20:06:00.567</Modified>
+      <Modified>2022-10-04T17:25:06.345</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Lorry\Documents\GitHub\Meally\MeallyApp\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-125.png">
       <PackagePath>appiconStoreLogo.scale-125.png</PackagePath>
-      <Modified>2022-09-19T20:06:00.571</Modified>
+      <Modified>2022-10-04T17:25:06.346</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Lorry\Documents\GitHub\Meally\MeallyApp\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-150.png">
       <PackagePath>appiconStoreLogo.scale-150.png</PackagePath>
-      <Modified>2022-09-19T20:06:00.576</Modified>
+      <Modified>2022-10-04T17:25:06.347</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Lorry\Documents\GitHub\Meally\MeallyApp\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-200.png">
       <PackagePath>appiconStoreLogo.scale-200.png</PackagePath>
-      <Modified>2022-09-19T20:06:00.582</Modified>
+      <Modified>2022-10-04T17:25:06.347</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Lorry\Documents\GitHub\Meally\MeallyApp\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-400.png">
       <PackagePath>appiconStoreLogo.scale-400.png</PackagePath>
-      <Modified>2022-09-19T20:06:00.589</Modified>
+      <Modified>2022-10-04T17:25:06.348</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Lorry\Documents\GitHub\Meally\MeallyApp\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-100.png">
       <PackagePath>appiconWideTile.scale-100.png</PackagePath>
-      <Modified>2022-09-19T20:06:00.682</Modified>
+      <Modified>2022-10-04T17:25:06.349</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Lorry\Documents\GitHub\Meally\MeallyApp\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-125.png">
       <PackagePath>appiconWideTile.scale-125.png</PackagePath>
-      <Modified>2022-09-19T20:06:00.691</Modified>
+      <Modified>2022-10-04T17:25:06.350</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Lorry\Documents\GitHub\Meally\MeallyApp\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-150.png">
       <PackagePath>appiconWideTile.scale-150.png</PackagePath>
-      <Modified>2022-09-19T20:06:00.701</Modified>
+      <Modified>2022-10-04T17:25:06.351</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Lorry\Documents\GitHub\Meally\MeallyApp\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-200.png">
       <PackagePath>appiconWideTile.scale-200.png</PackagePath>
-      <Modified>2022-09-19T20:06:00.717</Modified>
+      <Modified>2022-10-04T17:25:06.352</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Lorry\Documents\GitHub\Meally\MeallyApp\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-400.png">
       <PackagePath>appiconWideTile.scale-400.png</PackagePath>
-      <Modified>2022-09-19T20:06:00.762</Modified>
+      <Modified>2022-10-04T17:25:06.353</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Lorry\Documents\GitHub\Meally\MeallyApp\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-100.png">
       <PackagePath>dotnet_bot.scale-100.png</PackagePath>
-      <Modified>2022-09-19T20:06:00.585</Modified>
+      <Modified>2022-10-04T17:25:06.354</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Lorry\Documents\GitHub\Meally\MeallyApp\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-125.png">
       <PackagePath>dotnet_bot.scale-125.png</PackagePath>
-      <Modified>2022-09-19T20:06:00.597</Modified>
+      <Modified>2022-10-04T17:25:06.355</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Lorry\Documents\GitHub\Meally\MeallyApp\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-150.png">
       <PackagePath>dotnet_bot.scale-150.png</PackagePath>
-      <Modified>2022-09-19T20:06:00.614</Modified>
+      <Modified>2022-10-04T17:25:06.355</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Lorry\Documents\GitHub\Meally\MeallyApp\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-200.png">
       <PackagePath>dotnet_bot.scale-200.png</PackagePath>
-      <Modified>2022-09-19T20:06:00.638</Modified>
+      <Modified>2022-10-04T17:25:06.357</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Lorry\Documents\GitHub\Meally\MeallyApp\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-400.png">
       <PackagePath>dotnet_bot.scale-400.png</PackagePath>
-      <Modified>2022-09-19T20:06:00.693</Modified>
+      <Modified>2022-10-04T17:25:06.359</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Lorry\Documents\GitHub\Meally\MeallyApp\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\hamburger.scale-100.png">
       <PackagePath>hamburger.scale-100.png</PackagePath>
-      <Modified>2022-09-19T20:03:31.430</Modified>
+      <Modified>2022-10-04T17:26:41.929</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Lorry\Documents\GitHub\Meally\MeallyApp\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\menu_icon.scale-100.png">
       <PackagePath>menu_icon.scale-100.png</PackagePath>
-      <Modified>2022-09-19T20:06:00.619</Modified>
+      <Modified>2022-10-04T17:26:41.930</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Lorry\Documents\GitHub\Meally\MeallyApp\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\menu_icon.scale-125.png">
       <PackagePath>menu_icon.scale-125.png</PackagePath>
-      <Modified>2022-09-19T20:06:00.623</Modified>
+      <Modified>2022-10-04T17:26:41.930</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Lorry\Documents\GitHub\Meally\MeallyApp\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\menu_icon.scale-150.png">
       <PackagePath>menu_icon.scale-150.png</PackagePath>
-      <Modified>2022-09-19T20:06:00.627</Modified>
+      <Modified>2022-10-04T17:26:41.931</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Lorry\Documents\GitHub\Meally\MeallyApp\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\menu_icon.scale-200.png">
       <PackagePath>menu_icon.scale-200.png</PackagePath>
-      <Modified>2022-09-19T20:06:00.633</Modified>
+      <Modified>2022-10-04T17:26:41.932</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Lorry\Documents\GitHub\Meally\MeallyApp\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\menu_icon.scale-400.png">
       <PackagePath>menu_icon.scale-400.png</PackagePath>
-      <Modified>2022-09-19T20:06:00.650</Modified>
+      <Modified>2022-10-04T17:26:41.932</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Lorry\Documents\GitHub\Meally\MeallyApp\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\menu_only.scale-100.png">
       <PackagePath>menu_only.scale-100.png</PackagePath>
-      <Modified>2022-09-19T20:03:31.432</Modified>
+      <Modified>2022-10-04T17:26:41.933</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Lorry\Documents\GitHub\Meally\MeallyApp\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\no_effect.scale-100.png">
       <PackagePath>no_effect.scale-100.png</PackagePath>
-      <Modified>2022-09-19T20:03:31.432</Modified>
+      <Modified>2022-10-04T17:26:41.933</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Lorry\Documents\GitHub\Meally\MeallyApp\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\png_icon.scale-100.png">
       <PackagePath>png_icon.scale-100.png</PackagePath>
-      <Modified>2022-09-19T20:03:31.433</Modified>
+      <Modified>2022-10-04T17:26:41.934</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

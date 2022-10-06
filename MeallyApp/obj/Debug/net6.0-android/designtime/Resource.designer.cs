@@ -7893,22 +7893,25 @@ namespace MeallyApp
 			public const int no_effect = 2131165328;
 			
 			// aapt resource value: 0x7F07009D
-			public const int png_icon = 2131165341;
+			public const int placeholder = 2131165341;
 			
 			// aapt resource value: 0x7F07009E
-			public const int splash = 2131165342;
+			public const int png_icon = 2131165342;
 			
 			// aapt resource value: 0x7F07009F
-			public const int test_custom_background = 2131165343;
+			public const int splash = 2131165343;
 			
 			// aapt resource value: 0x7F0700A0
-			public const int test_level_drawable = 2131165344;
+			public const int test_custom_background = 2131165344;
 			
 			// aapt resource value: 0x7F0700A1
-			public const int tooltip_frame_dark = 2131165345;
+			public const int test_level_drawable = 2131165345;
 			
 			// aapt resource value: 0x7F0700A2
-			public const int tooltip_frame_light = 2131165346;
+			public const int tooltip_frame_dark = 2131165346;
+			
+			// aapt resource value: 0x7F0700A3
+			public const int tooltip_frame_light = 2131165347;
 			
 			static Drawable()
 			{
@@ -10162,6 +10165,18 @@ namespace MeallyApp
 			
 			// aapt resource value: 0x7F0D0003
 			public const int appicon_round = 2131558403;
+			
+			// aapt resource value: 0x7F0D0004
+			public const int no_effect = 2131558404;
+			
+			// aapt resource value: 0x7F0D0005
+			public const int no_effect_background = 2131558405;
+			
+			// aapt resource value: 0x7F0D0006
+			public const int no_effect_foreground = 2131558406;
+			
+			// aapt resource value: 0x7F0D0007
+			public const int no_effect_round = 2131558407;
 			
 			static Mipmap()
 			{

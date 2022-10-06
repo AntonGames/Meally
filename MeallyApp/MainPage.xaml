@@ -8,58 +8,54 @@
              x:Class="MeallyApp.MainPage">
     
     <Grid ColumnDefinitions="*,*"
-              ColumnSpacing="5"
               RowDefinitions="*,100"
-              RowSpacing="0"
-              Padding="10">
-        <Frame HeightRequest="300"
+              Padding="20,0,20,0">
+        <Frame HeightRequest="512"
                Grid.ColumnSpan="2"
                BackgroundColor="#F5F5F5"
                CornerRadius="10">
-        <CollectionView 
-                        x:Name="IngridientView"
-                        BackgroundColor="Transparent"
-                        ItemsLayout="VerticalGrid, 2"
-                        ItemsSource="{Binding IngredientsCollection}"
-                        SelectionMode="Multiple">
-            <CollectionView.ItemTemplate>
+            <CollectionView x:Name="IngridientView"
+                            BackgroundColor="Transparent"
+                            ItemsLayout="VerticalGrid, 2"
+                            ItemsSource="{Binding IngredientsCollection}"
+                            SelectionMode="Multiple">
+                <CollectionView.ItemTemplate>
 
-                <DataTemplate x:DataType="model:Ingredient">
-                    <!-- Selection work by using a grid inside a grid, outer grid is invisible until item is selected -->
-                    <Grid BackgroundColor="Transparent" HeightRequest="120" WidthRequest="120" Margin="10">
-
-
-                            <!-- VisualStateManager for item selections -->
-                            <VisualStateManager.VisualStateGroups>
-                                <VisualStateGroup Name="CommonStates">
-                                    <VisualState Name="Normal" />
-                                    <VisualState Name="Selected">
-                                        <VisualState.Setters>
-                                            <Setter Property="BackgroundColor" Value="#FF7A00" />
-                                        </VisualState.Setters>
-                                    </VisualState>
-                                </VisualStateGroup>
-                            </VisualStateManager.VisualStateGroups>
+                    <DataTemplate x:DataType="model:Ingredient">
+                        <!-- Selection work by using a grid inside a grid, outer grid is invisible until item is selected -->
+                        <Grid BackgroundColor="Transparent" HeightRequest="120" WidthRequest="120" Margin="10">
 
 
-                            <!-- Inner grid of item tile -->
-                            <Grid BackgroundColor="#FFC439" Margin="10" >
-                                <Label Text="{Binding Name}" TextColor="Black" HorizontalTextAlignment="Center" VerticalTextAlignment="End" Margin="0,0,0,10"/>
+                                <!-- VisualStateManager for item selections -->
+                                <VisualStateManager.VisualStateGroups>
+                                    <VisualStateGroup Name="CommonStates">
+                                        <VisualState Name="Normal" />
+                                        <VisualState Name="Selected">
+                                            <VisualState.Setters>
+                                                <Setter Property="BackgroundColor" Value="#FF7A00" />
+                                            </VisualState.Setters>
+                                        </VisualState>
+                                    </VisualStateGroup>
+                                </VisualStateManager.VisualStateGroups>
+
+
+                                <!-- Inner grid of item tile -->
+                                <Grid BackgroundColor="#FFC439" Margin="10" >
+                                    <Label Text="{Binding ingredient}" TextColor="Black" HorizontalTextAlignment="Center" VerticalTextAlignment="End" Margin="0,0,0,10"/>
+                                </Grid>
+
                             </Grid>
+                        </DataTemplate>
 
-                        </Grid>
-                    </DataTemplate>
-
-            </CollectionView.ItemTemplate>
-        </CollectionView>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
         </Frame>
         
         <Button x:Name="AddButton" 
                 Grid.Row="1"
                 Grid.ColumnSpan="2"
                 HeightRequest="50"
-                Margin="8"
-                Text="Add to fridge" TextColor="#231F20" 
+                Text="Add to inventory" TextColor="#231F20" 
                 CornerRadius="10" 
                 BackgroundColor="#FFC439" 
                 Clicked="AddButton_OnClicked"/>

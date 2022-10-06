@@ -6,10 +6,7 @@ namespace MeallyApp;
 
 public partial class MainPage : ContentPage
 {
-    private string _fileName = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "ingredients.txt");
-
     private List<Ingredient> selection = new List<Ingredient>();
-    public User user = new User();
 
     public MainPage(IngredientsViewModel viewModel)
     {
@@ -32,10 +29,8 @@ public partial class MainPage : ContentPage
             }
 
             // Assign inventory and clear selection
-            user.inventory = selection;
+            User.inventory = selection;
             IngridientView.SelectedItems.Clear();
-
-            user.PrintInv();
 
             /*
             // Used for individual item selection casting
