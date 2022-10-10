@@ -83,20 +83,4 @@
 	  </MauiXaml>
 	</ItemGroup>
 
-	<ItemGroup>
-	  <EditorConfigFiles Remove="C:\Users\Gustas\Documents\Meally\MeallyApp\Resources\ViewIngredients\.editorconfig" />
-	</ItemGroup>
-
-	<ItemGroup>
-	  <None Remove="Resources\ViewIngredients\.editorconfig" />
-	</ItemGroup>
-
-	<ItemGroup>
-	  <EditorConfigFiles Remove="C:\Users\Gustas\Documents\Meally\MeallyApp\Resources\ViewIngredients\.editorconfig" />
-	</ItemGroup>
-
-	<ItemGroup>
-	  <EditorConfigFiles Remove="C:\Users\Gustas\Documents\Meally\MeallyApp\Resources\ViewIngredients\.editorconfig" />
-	</ItemGroup>
-
 </Project>

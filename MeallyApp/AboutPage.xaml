@@ -8,13 +8,13 @@
     <VerticalStackLayout Spacing="20" VerticalOptions="Center">
         <HorizontalStackLayout Spacing="10" HorizontalOptions="Center">
 
-            <Label FontSize="22" FontAttributes="Bold" Text="Meally"/>
-            <Label FontSize="22" Text="v0.1 pre-alpha"/>
+            <Label TextColor="Black" FontSize="22" FontAttributes="Bold" Text="Meally"/>
+            <Label TextColor="#231F20" FontSize="22" Text="v0.1 pre-alpha"/>
 
         </HorizontalStackLayout>
 
 
-        <Label FontSize="15" Text="To learn more about the project and track its progress press the button below" HorizontalOptions="Center" HorizontalTextAlignment="Center" Margin="10"/>
+        <Label TextColor="#231F20" FontSize="15" Text="To learn more about the project and track its progress press the button below" HorizontalOptions="Center" HorizontalTextAlignment="Center" Margin="10"/>
 
         <Button Text="Learn more..." Clicked="LearnMore_Clicked" CornerRadius="10" TextColor="#231F20" BackgroundColor="#FFC439" Margin="100,0,100,0"/>
 

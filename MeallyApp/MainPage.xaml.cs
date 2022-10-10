@@ -1,57 +1,46 @@
-﻿using Java.Security;
-using System.Collections.ObjectModel;
+﻿using MeallyApp.Resources.ViewIngredients;
+using MeallyApp.Resources.Ingredients;
+using MeallyApp.UserData;
 
 namespace MeallyApp;
 
 public partial class MainPage : ContentPage
 {
-    private string _fileName = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "ingredients.txt");
+    private List<Ingredient> selection = new List<Ingredient>();
 
-    private ObservableCollection<String> Products = new ObservableCollection<string>();
- 
-    public MainPage()
+    public MainPage(IngredientsViewModel viewModel)
     {
-        //Products = ProductManager.GetProducts();
         InitializeComponent();
+        BindingContext = viewModel;
     }
-
-    public void ClearEntryText(Entry EntryObj)
-    {
-        Console.WriteLine("Text Cleared!");
-        EntryObj.Text = "";
-    }
-
     private void AddButton_OnClicked(object sender, EventArgs e)
     {
-        if (!string.IsNullOrWhiteSpace(IngEntry.Text))
-        {
-            File.AppendAllText(_fileName, IngEntry.Text + Environment.NewLine);
-        }
-        ClearEntryText(IngEntry);
-    }
+        selection.Clear();
 
-    private void LoadButton_OnClicked(object sender, EventArgs e)
-    {
-        if (File.Exists(_fileName)) 
+        if (IngridientView.SelectedItems != null)
         {
-            string[] buffer = File.ReadAllLines(_fileName);
-            foreach(string line in buffer)
+            // CollectionView returns IList<object>, code below casts IList<object> to List<Ingredients>
+            object tempObject = new Ingredient();
+
+            foreach (var o in IngridientView.SelectedItems)
             {
-                Console.WriteLine(line);
-                Products.Add(line);
+                tempObject = o;
+                selection.Add(tempObject as Ingredient);
             }
-            lvProduct.ItemsSource = Products;
-        }
-    }
 
-    private void DeleteButton_OnClicked(object sender, EventArgs e)
-    {
-        if (File.Exists(_fileName))
-        {
-            File.Delete(_fileName);
-        }
+            // Assign inventory and clear selection
+            User.inventory = selection;
+            IngridientView.SelectedItems.Clear();
 
-        IngEntry.Text = string.Empty;
+            /*
+            // Used for individual item selection casting
+            // Change IngridientView.SelectedItems to IngridientView.SelectedItem
+            object o = new Ingredient();
+            o = (IngridientView.SelectedItem); 
+            Ingredient selection = o as Ingredient;
+            Console.WriteLine("Selected item is {0}", selection.Name);
+            */
+        }
     }
 }
 
