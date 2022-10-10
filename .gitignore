@@ -4,6 +4,7 @@
 MeallyApp/.vs/*
 MeallyApp/obj/*
 MeallyApp/bin/*
+MeallyApp/MeallyApp.csproj.user
 
 # User-specific files
 *.rsuser
