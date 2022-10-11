@@ -25,6 +25,7 @@ public partial class MainPage : ContentPage
             foreach (var o in IngridientView.SelectedItems)
             {
                 tempObject = o;
+                // Widening and narrowing type conversions
                 selection.Add(tempObject as Ingredient);
             }
 
