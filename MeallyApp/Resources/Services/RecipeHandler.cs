@@ -51,6 +51,10 @@ namespace MeallyApp.Resources.Services
             }
         }
 
+        public static async Task<List<Recipe>> GetRecipeList()
+        {
+            return new List<Recipe>(database);
+        }
 
     }
 
