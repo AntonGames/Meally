@@ -15,6 +15,7 @@ namespace MeallyApp.Resources.Ingredients
         public Ingredients ingredient { get; set; }
         public string Image { get; set; }
 
+        // Regex usage
         public override string ToString()
         {
             return Regex.Replace(ingredient.ToString(), "[a-z][A-Z]", m => $"{m.Value[0]} {char.ToLower(m.Value[1])}");

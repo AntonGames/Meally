@@ -11,9 +11,10 @@ namespace MeallyApp.Resources.ViewIngredients
 {
     public class BaseViewModel : INotifyPropertyChanged
     {
-        private bool isBusy;
+        private bool isBusy; 
         private string title;
 
+        // Property usage in struct and class;
         public bool IsBusy
         {
             get { return isBusy; }
