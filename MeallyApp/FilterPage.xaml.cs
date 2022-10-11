@@ -35,4 +35,11 @@ public partial class FilterPage : ContentPage
             return;
         }
     }
+
+    protected override void OnAppearing()
+    {
+        base.OnAppearing();
+
+        ViewModel.GetRecipesCommand.Execute(this);
+    }
 }
