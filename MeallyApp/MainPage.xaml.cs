@@ -1,6 +1,7 @@
 ﻿using MeallyApp.Resources.ViewIngredients;
 using MeallyApp.Resources.Ingredients;
 using MeallyApp.UserData;
+using MeallyApp.Resources.Services;
 
 namespace MeallyApp;
 
@@ -31,6 +32,8 @@ public partial class MainPage : ContentPage
 
             // Assign inventory and clear selection
             User.inventory = selection;
+            RecipeHandler.SetComp(User.inventory);
+            RecipeHandler.OrderDB();
             IngridientView.SelectedItems.Clear();
 
             /*
