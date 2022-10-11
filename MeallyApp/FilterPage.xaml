@@ -2,57 +2,69 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MeallyApp.FilterPage"
+             xmlns:model="clr-namespace:MeallyApp.Resources.Ingredients"
+             xmlns:viewmodel="clr-namespace:MeallyApp.Resources.ViewIngredients"
+             x:DataType="viewmodel:RecipeViewModel"
              Title="Recipes">
 
-    <Grid Padding="20,0,20,0"
-          RowDefinitions="100,150"
+    <Grid Padding="0,0,0,0"
+          RowDefinitions="100,*"
           RowSpacing="0">
 
         <Button Grid.Row="0"
+                Margin="20,0,20,0"
                 HeightRequest="50"
                 Text="Load from file..." TextColor="#231F20" 
                 CornerRadius="10" 
                 BackgroundColor="#FFC439" 
                 Clicked="RecipeButton_OnClicked"/>
 
+        <CollectionView x:Name="RecipeCollectionView"
+                        ItemsSource="{Binding Recipes}"
+                        BackgroundColor="Transparent"
+                        Grid.Row="1">
+            
+            <CollectionView.ItemTemplate>
+                <DataTemplate x:DataType="model:Recipe">
 
+                    <!-- Template for CollectionView of Recipes -->
+                    <Frame CornerRadius="10"
+                           Grid.Row="1"
+                           HeightRequest="150"
+                           WidthRequest="350"
+                           Margin="0,0,0,10">
 
+                        <Grid HeightRequest="150" 
+                              WidthRequest="350"
+                              ColumnDefinitions="150,150,*"
+                              RowDefinitions="50,70,20,*"
+                              RowSpacing="0">
 
-        <!-- Template for CollectionView of Recipes -->
-        <Frame CornerRadius="10"
-               Grid.Row="1"
-               HeightRequest="150"
-               WidthRequest="350">
+                            <Frame CornerRadius="10" HeightRequest="120" WidthRequest="125" BackgroundColor="Transparent" Grid.Column="0" Grid.RowSpan="4">
+                                <Image Source="place_holder.png" HeightRequest="130" WidthRequest="130"/>
+                            </Frame>
 
-            <Grid HeightRequest="150" 
-                  WidthRequest="350"
-                  ColumnDefinitions="150,150,*"
-                  RowDefinitions="50,70,20,*"
-                  RowSpacing="0">
+                            <Label Grid.Column="1" Grid.Row="0" TextColor="Black" Text="{Binding Name}" Margin="0,12,0,0" FontAttributes="Bold" FontSize="18" LineBreakMode="MiddleTruncation"/>
 
-                <Frame CornerRadius="10" HeightRequest="120" WidthRequest="125" BackgroundColor="Black" Grid.Column="0" Grid.RowSpan="4">
-                    <Image Source="placeholder.png" HeightRequest="125" WidthRequest="125"/>
-                </Frame>
+                            <Label Text="{Binding RecipeInstructions}"
+                                   HorizontalOptions="Start"
+                                   Grid.Row="1"
+                                   Grid.Column="1"
+                                   Grid.ColumnSpan="2"
+                                   Grid.RowSpan="2"
+                                   Margin="0,0,20,20"
+                                   TextColor="Black"
+                            />
 
+                            <Label TextColor="Black" Text="{Binding Compatibility}" Grid.Row="2" Grid.Column="2" Grid.ColumnSpan="2" Margin="0,0,0,0"/>
+                        </Grid>
+                    </Frame>
+                    <!-- Template end -->
 
-                <Label Grid.Column="1" Grid.Row="0" TextColor="Black" Text="Lasagna" Margin="0,12,0,0" FontAttributes="Bold" FontSize="25"/>
-
-                <Label Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at sem a odio malesuada maximus. Praesent in aliquam arcu, vitae feugiat neque. Phasellus dignissim auctor fermentum. Nam ut diam condimentum elit laoreet sollicitudin. Integer interdum vestibulum sapien. Mauris felis dui, lobortis at arcu nec, lacinia ultrices leo. Aenean sit amet vulputate massa. Aliquam sed nulla a erat tincidunt tincidunt."
-                       Grid.Row="1"
-                       Grid.Column="1"
-                       Grid.ColumnSpan="2"
-                       Grid.RowSpan="2"
-                       Margin="0,0,20,20"
-                       TextColor="Black"
-                />
-
-                <Label TextColor="Black" Text="90%" Grid.Row="2" Grid.Column="2" Grid.ColumnSpan="2" Margin="0,0,0,0"/>
-            </Grid>
-        </Frame>
-        <!-- Template end -->
-
-
-
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+            
+        </CollectionView>
 
     </Grid>
 

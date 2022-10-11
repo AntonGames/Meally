@@ -22,6 +22,10 @@ public static class MauiProgram
 
 		builder.Services.AddSingleton<MainPage>();
 
-		return builder.Build();
+        builder.Services.AddSingleton<RecipeViewModel>();
+
+        builder.Services.AddSingleton<FilterPage>();
+
+        return builder.Build();
 	}
 }
