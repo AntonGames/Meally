@@ -8,7 +8,8 @@ namespace MeallyApp.Resources.Services
 
         public IngredientService()
         {
-            ingredientList.Add(new Ingredient(Ingredients.Ingredients.Spaghetti, "IMG"));
+            // named argument usage
+            ingredientList.Add(new Ingredient(image: "IMG", ingredient: Ingredients.Ingredients.Spaghetti));
             ingredientList.Add(new Ingredient(Ingredients.Ingredients.Butter, "IMG"));
             ingredientList.Add(new Ingredient(Ingredients.Ingredients.Garlic, "IMG"));
             ingredientList.Add(new Ingredient(Ingredients.Ingredients.Cheese, "IMG"));
