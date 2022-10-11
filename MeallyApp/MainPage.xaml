@@ -1,18 +1,65 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:model="clr-namespace:MeallyApp.Resources.Ingredients"
+             xmlns:viewmodel="clr-namespace:MeallyApp.Resources.ViewIngredients"
+             x:DataType="viewmodel:IngredientsViewModel"
+             Title="{Binding Title}"
              x:Class="MeallyApp.MainPage">
+    
+    <Grid ColumnDefinitions="*,*"
+              RowDefinitions="*,100"
+              Padding="20,0,20,0">
+        <Frame HeightRequest="512"
+               Grid.ColumnSpan="2"
+               BackgroundColor="#F5F5F5"
+               CornerRadius="10">
+            <CollectionView x:Name="IngridientView"
+                            BackgroundColor="Transparent"
+                            ItemsLayout="VerticalGrid, 2"
+                            ItemsSource="{Binding IngredientsCollection}"
+                            SelectionMode="Multiple">
+                <CollectionView.ItemTemplate>
 
-    <StackLayout Spacing="10">
+                    <DataTemplate x:DataType="model:Ingredient">
+                        <!-- Selection work by using a grid inside a grid, outer grid is invisible until item is selected -->
+                        <Grid BackgroundColor="Transparent" HeightRequest="120" WidthRequest="120" Margin="10">
 
-        <Entry x:Name="IngEntry" Placeholder="Enter ingredient" ClearButtonVisibility="WhileEditing" ReturnType="Done" HorizontalOptions="Center" VerticalOptions="Center" Margin="0,25,0,0"/>
 
-        <BoxView Color="#D9D9D9" CornerRadius="10" WidthRequest="300" HeightRequest="200" VerticalOptions="Center" HorizontalOptions="Center" />
+                                <!-- VisualStateManager for item selections -->
+                                <VisualStateManager.VisualStateGroups>
+                                    <VisualStateGroup Name="CommonStates">
+                                        <VisualState Name="Normal" />
+                                        <VisualState Name="Selected">
+                                            <VisualState.Setters>
+                                                <Setter Property="BackgroundColor" Value="#FF7A00" />
+                                            </VisualState.Setters>
+                                        </VisualState>
+                                    </VisualStateGroup>
+                                </VisualStateManager.VisualStateGroups>
 
-        <Button x:Name="AddButton" Text="Add" TextColor="#231F20" CornerRadius="10" BackgroundColor="#FFC439" Margin="100,50,100,0" Clicked="AddButton_OnClicked"/>
 
-        <Button x:Name="LoadButton" Text="Load" TextColor="#231F20" CornerRadius="10" BackgroundColor="#FFC439" Margin="100,25,100,0" Clicked="LoadButton_OnClicked"/>
+                                <!-- Inner grid of item tile -->
+                                <Grid BackgroundColor="#FFC439" Margin="10" >
+                                    <Label Text="{Binding ingredient}" TextColor="Black" HorizontalTextAlignment="Center" VerticalTextAlignment="End" Margin="0,0,0,10"/>
+                                </Grid>
 
-    </StackLayout>
+                            </Grid>
+                        </DataTemplate>
+
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </Frame>
+        
+        <Button x:Name="AddButton" 
+                Grid.Row="1"
+                Grid.ColumnSpan="2"
+                HeightRequest="50"
+                Text="Add to inventory" TextColor="#231F20" 
+                CornerRadius="10" 
+                BackgroundColor="#FFC439" 
+                Clicked="AddButton_OnClicked"/>
+    </Grid>
+    
 
 </ContentPage>

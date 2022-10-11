@@ -18,8 +18,14 @@
             Route="MainPage" />
 
     <ShellContent
+        Title="Recipes"
+        ContentTemplate="{DataTemplate local:FilterPage}"
+        Route="FilterPage" />
+
+    <ShellContent
         Title="About"
         ContentTemplate="{DataTemplate local:AboutPage}"
         Route="AboutPage" />
+
 
 </Shell>
