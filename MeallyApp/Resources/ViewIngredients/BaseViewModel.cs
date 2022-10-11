@@ -24,7 +24,6 @@ namespace MeallyApp.Resources.ViewIngredients
                 {
                     isBusy = value;
                     OnPropertyChanged();
-                    OnPropertyChanged(nameof(IsNotBusy));
                 }
             }
         }
@@ -33,18 +32,15 @@ namespace MeallyApp.Resources.ViewIngredients
         {
             get { return title; }
 
-            set 
-            { 
-                if(title != value)
+            set
+            {
+                if (title != value)
                 {
                     title = value;
                     OnPropertyChanged();
                 }
             }
         }
-
-
-        public bool IsNotBusy => !IsBusy;
 
         public event PropertyChangedEventHandler PropertyChanged;
 
