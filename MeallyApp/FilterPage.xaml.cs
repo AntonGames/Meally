@@ -17,11 +17,16 @@ public partial class FilterPage : ContentPage
 
     private async void RecipeButton_OnClicked(object sender, EventArgs e)
     {
-        RecipeHandler.GetDB();
-        RecipeHandler.SetComp(User.inventory);
-        RecipeHandler.OrderDB();
-        RecipeHandler.PrintDB();
-        ViewModel.GetRecipesCommand.Execute(this);
+        if (!Loader.IsRunning)
+        {
+            Console.WriteLine("Loading db");
+            Loader.IsRunning = true;
+            await RecipeHandler.GetDBAsync();
+            RecipeHandler.SetComp(User.inventory);
+            RecipeHandler.OrderDB();
+            Loader.IsRunning = false;
+            ViewModel.GetRecipesCommand.Execute(this);
+        }
     }
 
     protected override void OnAppearing()
