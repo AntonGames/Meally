@@ -16,10 +16,13 @@ namespace MeallyApp.Resources.Services
 
 
         // Get recipes from database
-        public static void GetDB()
+        public static async Task GetDBAsync()
         {
+            RecipeHandler.database.Clear();
+         
+            // Setup bit.io database connection
             var bitHost = "db.bit.io";
-            var bitUser = "LorryGailius";
+            var bitUser = "";
             var bitDbName = "LorryGailius/Meally";
             var bitApiKey = "v2_3usyy_JDfAYxxp5xTy6SgPPGEiZF4";
 
@@ -27,12 +30,12 @@ namespace MeallyApp.Resources.Services
 
             using var con = new NpgsqlConnection(cs);
 
-            con.Open();
+            await con.OpenAsync();
             con.TypeMapper.UseJsonNet();
             using (var cmd = new NpgsqlCommand(@"SELECT json_build_object('Name', Name, 'Image', Image, 'Compatibility', Compatibility, 'RecipeInstructions', RecipeInstructions, 'Ingredients', Ingredients) FROM ""Recipes"";", con))
-            using (var reader = cmd.ExecuteReader())
+            using (var reader = await cmd.ExecuteReaderAsync())
             {
-                while (reader.Read())
+                while (await reader.ReadAsync())
                 {
                     var temp = reader.GetFieldValue<Recipe>(0);
                     database.Add(temp);
