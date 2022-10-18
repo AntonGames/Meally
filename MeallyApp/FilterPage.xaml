@@ -4,9 +4,14 @@
              x:Class="MeallyApp.FilterPage"
              xmlns:model="clr-namespace:MeallyApp.Resources.Ingredients"
              xmlns:viewmodel="clr-namespace:MeallyApp.Resources.ViewIngredients"
+             xmlns:Converter="clr-namespace:MeallyApp.Resources.Converters"
              x:DataType="viewmodel:RecipeViewModel"
              Title="Recipes">
 
+    <ContentPage.Resources>
+        <Converter:DoubleToPercentageConverter x:Key="DoubleToPercentage"/>
+    </ContentPage.Resources>
+    
     <Grid Padding="0,0,0,0"
           RowDefinitions="100,*"
           RowSpacing="0">
@@ -58,7 +63,7 @@
                                    TextColor="Black"
                             />
 
-                            <Label TextColor="Black" Text="{Binding Compatibility}" Grid.Row="2" Grid.Column="2" Grid.ColumnSpan="2" Margin="0,0,0,0"/>
+                            <Label TextColor="Black" Text="{Binding Compatibility, Converter={StaticResource DoubleToPercentage}}" Grid.Row="2" Grid.Column="2" Grid.ColumnSpan="2" Margin="0,0,0,0"/>
                         </Grid>
                     </Frame>
                     <!-- Template end -->

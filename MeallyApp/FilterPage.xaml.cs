@@ -19,7 +19,6 @@ public partial class FilterPage : ContentPage
     {
         if (!Loader.IsRunning)
         {
-            Console.WriteLine("Loading db");
             Loader.IsRunning = true;
             await RecipeHandler.GetDBAsync();
             RecipeHandler.SetComp(User.inventory);

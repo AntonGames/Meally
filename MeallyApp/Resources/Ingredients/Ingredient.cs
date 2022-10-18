@@ -9,13 +9,13 @@ namespace MeallyApp.Resources.Ingredients
         public Ingredient(Ingredients ingredient, string image)
         {
             this.ingredient = ingredient;
-            displayName = this.ToString();
+            DisplayName = this.ToString();
             this.Image = image;
         }
 
         public Ingredients ingredient { get; set; }
 
-        public string displayName { get; set; } 
+        public string DisplayName { get; set; } 
 
         public string Image { get; set; }
 
