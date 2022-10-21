@@ -84,7 +84,7 @@ namespace MeallyApp.Resources.Services
             Console.WriteLine("\n\n");
         }
 
-        public static async Task<List<Recipe>> GetRecipeList()
+        public static List<Recipe> GetRecipeList()
         {
             return new List<Recipe>(database);
         }

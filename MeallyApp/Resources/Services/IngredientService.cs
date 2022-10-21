@@ -40,7 +40,7 @@ namespace MeallyApp.Resources.Services
             ingredientList.Add(new Ingredient(Ingredients.Ingredients.Paprika, "IMG"));
         }
 
-        public async Task<List<Ingredient>> GetIngredients()
+        public List<Ingredient> GetIngredients()
         {
             if(ingredientList?.Count > 0)
             {
