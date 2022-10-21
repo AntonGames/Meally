@@ -5,12 +5,15 @@
              xmlns:model="clr-namespace:MeallyApp.Resources.Ingredients"
              xmlns:viewmodel="clr-namespace:MeallyApp.Resources.ViewIngredients"
              xmlns:Converter="clr-namespace:MeallyApp.Resources.Converters"
-             x:DataType="viewmodel:RecipeViewModel"
-             Title="Recipes">
+             x:DataType="viewmodel:RecipeViewModel">
 
     <ContentPage.Resources>
         <Converter:DoubleToPercentageConverter x:Key="DoubleToPercentage"/>
     </ContentPage.Resources>
+
+    <Shell.TitleView>
+        <Label Text="{Binding Title}" FontFamily="OpenSansSemibold" VerticalOptions="CenterAndExpand" HorizontalOptions="Start" TextColor="#231F20" FontSize="Title"  Margin="0,0,0,5"/>
+    </Shell.TitleView>
     
     <Grid Padding="0,0,0,0"
           RowDefinitions="100,*"
@@ -39,7 +42,13 @@
                            Grid.Row="1"
                            HeightRequest="150"
                            WidthRequest="350"
-                           Margin="0,0,0,10">
+                           Margin="0,0,0,10"
+                           >
+
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:RecipeViewModel}}, Path=TapCommand}"
+                                                  CommandParameter="{Binding .}"/>
+                        </Frame.GestureRecognizers>
 
                         <Grid HeightRequest="150" 
                               WidthRequest="350"

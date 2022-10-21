@@ -4,9 +4,12 @@
              xmlns:model="clr-namespace:MeallyApp.Resources.Ingredients"
              xmlns:viewmodel="clr-namespace:MeallyApp.Resources.ViewIngredients"
              x:DataType="viewmodel:IngredientsViewModel"
-             Title="{Binding Title}"
              x:Class="MeallyApp.MainPage">
-    
+
+    <Shell.TitleView>
+        <Label Text="{Binding Title}" FontFamily="OpenSansSemibold" VerticalOptions="CenterAndExpand" HorizontalOptions="Start" TextColor="#231F20" FontSize="20"  Margin="0,0,0,2"/>
+    </Shell.TitleView>
+
     <Grid ColumnDefinitions="*,*"
               RowDefinitions="*,100"
               Padding="20,0,20,0">
