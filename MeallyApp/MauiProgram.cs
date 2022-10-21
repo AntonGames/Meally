@@ -1,4 +1,5 @@
-﻿using MeallyApp.Resources.Services;
+﻿using CommunityToolkit.Maui;
+using MeallyApp.Resources.Services;
 using MeallyApp.Resources.ViewIngredients;
 
 namespace MeallyApp;
@@ -9,7 +10,7 @@ public static class MauiProgram
 	{
 		var builder = MauiApp.CreateBuilder();
 		builder
-			.UseMauiApp<App>()
+			.UseMauiApp<App>().UseMauiCommunityToolkit()
 			.ConfigureFonts(fonts =>
 			{
 				fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
@@ -25,6 +26,10 @@ public static class MauiProgram
         builder.Services.AddSingleton<RecipeViewModel>();
 
         builder.Services.AddSingleton<FilterPage>();
+
+        builder.Services.AddTransient<RecipeDetailsViewModel>();
+
+        builder.Services.AddTransient<RecipePage>();
 
         return builder.Build();
 	}
