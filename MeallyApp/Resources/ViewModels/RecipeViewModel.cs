@@ -1,4 +1,5 @@
-﻿using MeallyApp.Resources.Ingredients;
+﻿using CommunityToolkit.Mvvm.Input;
+using MeallyApp.Resources.Ingredients;
 using MeallyApp.Resources.Services;
 using System.Collections.ObjectModel;
 
@@ -8,12 +9,13 @@ namespace MeallyApp.Resources.ViewIngredients
     {
         public ObservableCollection<Recipe> Recipes { get; } = new();
 
-        
+
 
         public Command GetRecipesCommand { get; }
 
         public RecipeViewModel()
         {
+            Title = "Recipes";
             GetRecipesCommand = new Command(async () => await GetRecipesAsync());
         }
 
@@ -27,7 +29,7 @@ namespace MeallyApp.Resources.ViewIngredients
             try
             {
                 IsBusy = true;
-                var recipes = await RecipeHandler.GetRecipeList();
+                var recipes = RecipeHandler.GetRecipeList();
 
                 if (Recipes.Count != 0)
                 {
@@ -39,7 +41,7 @@ namespace MeallyApp.Resources.ViewIngredients
                     Recipes.Add(recipe);
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 await Shell.Current.DisplayAlert("Error!", "Unable to display products.", "OK!");
             }
@@ -48,5 +50,12 @@ namespace MeallyApp.Resources.ViewIngredients
                 IsBusy = false;
             }
         }
+
+        [RelayCommand]
+        async Task Tap(Recipe recipe)
+        {
+            await Shell.Current.GoToAsync($"{nameof(RecipePage)}",true , new Dictionary<string, object> { ["Recipe"] = recipe });
+        }
+        
     }
 }
