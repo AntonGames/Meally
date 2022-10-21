@@ -29,10 +29,4 @@
         ContentTemplate="{DataTemplate local:AboutPage}"
         Route="AboutPage" />
 
-    <ShellContent
-        Title="Debug"
-        ContentTemplate="{DataTemplate local:RecipePage}"
-        Route="RecipePage" />
-
-
 </Shell>

@@ -11,9 +11,10 @@
     </Shell.TitleView>
 
     <Grid ColumnDefinitions="*,*"
-              RowDefinitions="*,100"
+              RowDefinitions="Auto,100"
               Padding="20,0,20,0">
         <Frame HeightRequest="512"
+               Margin="0,10,0,0"
                Grid.ColumnSpan="2"
                BackgroundColor="#F5F5F5"
                CornerRadius="10">

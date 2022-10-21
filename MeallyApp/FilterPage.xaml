@@ -56,11 +56,11 @@
                               RowDefinitions="50,70,20,*"
                               RowSpacing="0">
 
-                            <Frame CornerRadius="10" HeightRequest="120" WidthRequest="125" BackgroundColor="Transparent" Grid.Column="0" Grid.RowSpan="4">
-                                <Image Source="{Binding Image}" HeightRequest="130" WidthRequest="130"/>
+                            <Frame CornerRadius="10" HeightRequest="120" WidthRequest="125" Grid.Column="0" Grid.RowSpan="4">
+                                <Image Source="{Binding Image}" Aspect="AspectFill"/>
                             </Frame>
 
-                            <Label Grid.Column="1" Grid.Row="0" TextColor="Black" Text="{Binding Name}" Margin="0,12,0,0" FontAttributes="Bold" FontSize="18" LineBreakMode="MiddleTruncation"/>
+                            <Label Grid.Column="1" Grid.Row="0" TextColor="#231F20" Text="{Binding Name}" Margin="0,12,0,0" FontAttributes="Bold" FontSize="18" LineBreakMode="MiddleTruncation"/>
 
                             <Label Text="{Binding RecipeInstructions}"
                                    HorizontalOptions="Start"
@@ -69,10 +69,10 @@
                                    Grid.ColumnSpan="2"
                                    Grid.RowSpan="2"
                                    Margin="0,0,20,20"
-                                   TextColor="Black"
+                                   TextColor="#231F20"
                             />
 
-                            <Label TextColor="Black" Text="{Binding Compatibility, Converter={StaticResource DoubleToPercentage}}" Grid.Row="2" Grid.Column="2" Grid.ColumnSpan="2" Margin="0,0,0,0"/>
+                            <Label TextColor="#231F20" Text="{Binding Compatibility, Converter={StaticResource DoubleToPercentage}}" Grid.Row="2" Grid.Column="2" Grid.ColumnSpan="2" Margin="0,0,0,0"/>
                         </Grid>
                     </Frame>
                     <!-- Template end -->
