@@ -33,7 +33,7 @@
             <Label Text="{Binding Recipe.Compatibility, Converter={StaticResource DoubleToPercentage}}" TextColor="#231F20" FontSize="Body"
             HorizontalOptions="Center" VerticalOptions="End" Margin="0,0,0,8"/>
 
-            <Label Text="Insert ingredients here" TextColor="#231F20" HorizontalOptions="Center" VerticalOptions="Center" Margin="25"/>
+            <ListView ItemsSource="{Binding Recipe.Ingredients}" SelectionMode="None"/>
 
             <Label Text="{Binding Recipe.RecipeInstructions, Converter={StaticResource InstructionsToXAML}}" TextColor="#231F20" 
             FontSize="Body"
