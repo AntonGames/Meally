@@ -1,6 +1,7 @@
 ﻿using MeallyApp.Resources.Ingredients;
 using MeallyApp.UserData;
 using Newtonsoft.Json;
+using Npgsql;
 
 namespace MeallyApp.Resources.Services
 {
@@ -14,14 +15,33 @@ namespace MeallyApp.Resources.Services
         public static string DBPath = null;
 
 
-        /* Get database of recipes from .json file
-        5. Reading from file */
-        public static void GetDB()
+        // Get recipes from database
+        public static async Task GetDBAsync()
         {
-            var inputStream = new FileStream(DBPath, FileMode.Open, FileAccess.Read);
-            var streamReader = new StreamReader(inputStream);
-            string jsonData = streamReader.ReadToEnd();
-            database = JsonConvert.DeserializeObject<List<Recipe>>(jsonData);
+            RecipeHandler.database.Clear();
+         
+            // Setup bit.io database connection
+            var bitHost = "db.bit.io";
+            var bitUser = "";
+            var bitDbName = "LorryGailius/Meally";
+            var bitApiKey = "v2_3usyy_JDfAYxxp5xTy6SgPPGEiZF4";
+
+            var cs = $"Host={bitHost};Username={bitUser};Password={bitApiKey};Database={bitDbName}";
+
+            using var con = new NpgsqlConnection(cs);
+
+            await con.OpenAsync();
+            con.TypeMapper.UseJsonNet();
+            using (var cmd = new NpgsqlCommand(@"SELECT json_build_object('Name', Name, 'Image', Image, 'Compatibility', Compatibility, 'RecipeInstructions', RecipeInstructions, 'Ingredients', Ingredients) FROM ""Recipes"";", con))
+            using (var reader = await cmd.ExecuteReaderAsync())
+            {
+                while (await reader.ReadAsync())
+                {
+                    var temp = reader.GetFieldValue<Recipe>(0);
+                    database.Add(temp);
+                }
+            }
+            con.Close();
         }
 
         // Set Compatibility rating on Recipe list

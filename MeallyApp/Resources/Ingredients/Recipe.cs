@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace MeallyApp.Resources.Ingredients
+﻿namespace MeallyApp.Resources.Ingredients
 {
     public class Recipe : IComparable<Recipe>
     {

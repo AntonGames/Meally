@@ -41,7 +41,7 @@
 
                                 <!-- Inner grid of item tile -->
                                 <Grid BackgroundColor="#FFC439" Margin="10" >
-                                    <Label Text="{Binding ingredient}" TextColor="Black" HorizontalTextAlignment="Center" VerticalTextAlignment="End" Margin="0,0,0,10"/>
+                                <Label Text="{Binding DisplayName}" TextColor="Black" HorizontalTextAlignment="Center" VerticalTextAlignment="End" Margin="0,0,0,10"/>
                                 </Grid>
 
                             </Grid>

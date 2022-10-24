@@ -17,22 +17,14 @@ public partial class FilterPage : ContentPage
 
     private async void RecipeButton_OnClicked(object sender, EventArgs e)
     {
-        var file = await FilePicker.PickAsync(new PickOptions());
-
-        if (file != null)
+        if (!Loader.IsRunning)
         {
-            if (file.FileName.EndsWith(".json", StringComparison.OrdinalIgnoreCase))
-            RecipeHandler.DBPath = file.FullPath;
-            RecipeHandler.GetDB();
+            Loader.IsRunning = true;
+            await RecipeHandler.GetDBAsync();
             RecipeHandler.SetComp(User.inventory);
             RecipeHandler.OrderDB();
-            RecipeHandler.PrintDB();
-
+            Loader.IsRunning = false;
             ViewModel.GetRecipesCommand.Execute(this);
-        }
-        else
-        {
-            return;
         }
     }
 

@@ -1,5 +1,4 @@
-﻿
-namespace MeallyApp.Resources.Ingredients
+﻿namespace MeallyApp.Resources.Ingredients
 {
     public enum Ingredients
     {
