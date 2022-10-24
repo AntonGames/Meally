@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodel="clr-namespace:MeallyApp.Resources.ViewIngredients"
+             x:DataType="viewmodel:RecipeDetailsViewModel"
+             xmlns:Converter="clr-namespace:MeallyApp.Resources.Converters"
+             x:Class="MeallyApp.RecipePage"
+             Title="">
+    
+    <ContentPage.Resources>
+        <Converter:DoubleToPercentageConverter x:Key="DoubleToPercentage"/>
+        <Converter:InstructionsToXAMLConverter x:Key="InstructionsToXAML"/>
+    </ContentPage.Resources>
+
+    <ScrollView>
+        <StackLayout Padding="25,0,25,0">
+
+            <Frame HeightRequest="200" BackgroundColor="#FAF9F7" Padding="0" CornerRadius="10">
+                <Image Source="{Binding Recipe.Image}" Aspect="AspectFill"/>
+            </Frame>
+
+            <Label Text="{Binding Recipe.Name}" TextColor="#231F20" FontSize="Title"
+               HorizontalOptions="Center" VerticalOptions="Start" 
+               HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Margin="0,20,0,0"/>
+
+            <BoxView Color="#FFC439"
+             CornerRadius="10"
+             Margin="50,5,50,5"
+             HeightRequest="5"
+             VerticalOptions="Center"
+             HorizontalOptions="Center" />
+
+            <Label Text="{Binding Recipe.Compatibility, Converter={StaticResource DoubleToPercentage}}" TextColor="#231F20" FontSize="Body"
+            HorizontalOptions="Center" VerticalOptions="End" Margin="0,0,0,8"/>
+
+            <Label Text="Insert ingredients here" TextColor="#231F20" HorizontalOptions="Center" VerticalOptions="Center" Margin="25"/>
+
+            <Label Text="{Binding Recipe.RecipeInstructions, Converter={StaticResource InstructionsToXAML}}" TextColor="#231F20" 
+            FontSize="Body"
+            HorizontalOptions="Center" VerticalOptions="Center" Margin="10,0,10,50"/>
+
+
+        </StackLayout>
+    </ScrollView>
+
+</ContentPage>
