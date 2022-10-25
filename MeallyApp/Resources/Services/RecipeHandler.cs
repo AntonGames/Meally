@@ -1,6 +1,5 @@
 ﻿using MeallyApp.Resources.Ingredients;
 using MeallyApp.UserData;
-using Newtonsoft.Json;
 using Npgsql;
 
 namespace MeallyApp.Resources.Services
