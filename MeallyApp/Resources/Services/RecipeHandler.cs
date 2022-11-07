@@ -8,16 +8,16 @@ namespace MeallyApp.Resources.Services
     {
         // This is a list of all recipes
         // Generic
-        public static List<Recipe> database = new List<Recipe>();
+
+        public static Lazy<List<Recipe>> database = new Lazy<List<Recipe>>();
 
         // This is path to database file
         public static string DBPath = null;
 
-
         // Get recipes from database
         public static async Task GetDBAsync()
         {
-            RecipeHandler.database.Clear();
+            RecipeHandler.database.Value.Clear();
          
             // Setup bit.io database connection
             var bitHost = "db.bit.io";
@@ -37,7 +37,7 @@ namespace MeallyApp.Resources.Services
                 while (await reader.ReadAsync())
                 {
                     var temp = reader.GetFieldValue<Recipe>(0);
-                    database.Add(temp);
+                    database.Value.Add(temp);
                 }
             }
             con.Close();
@@ -46,7 +46,7 @@ namespace MeallyApp.Resources.Services
         // Set Compatibility rating on Recipe list
         public static void SetComp(List<Ingredient> userIngredients)
         {
-            foreach (var recipe in database)
+            foreach (var recipe in database.Value)
             {
                 var missingIngredients = recipe.Ingredients.Where(a => !User.inventory.Exists(b => b.ingredient.Equals(a.ingredient))).ToList();
 
@@ -61,13 +61,17 @@ namespace MeallyApp.Resources.Services
         // LINQ to Objects usage (methods and queries)
         public static void OrderDB()
         {
-            database = database.OrderByDescending(x => x.Compatibility).ToList();
+            List<Recipe> tempList = database.Value.OrderByDescending(x => x.Compatibility).ToList();
+            for (int i = 0; i < database.Value.Count; i++)
+            {
+                database.Value[i] = tempList[i];
+            }
         }
 
         // Print all recipes in database
         public static void PrintDB()
         {
-            foreach (var recipe in database)
+            foreach (var recipe in database.Value)
             {
                 Console.WriteLine($"[Name: {recipe.Name}] [Compatibility: {recipe.Compatibility}]\n");
                 recipe.Ingredients.ForEach(i => Console.Write("{0}\t", i));
@@ -85,7 +89,7 @@ namespace MeallyApp.Resources.Services
 
         public static List<Recipe> GetRecipeList()
         {
-            return new List<Recipe>(database);
+            return new List<Recipe>(database.Value);
         }
 
     }
