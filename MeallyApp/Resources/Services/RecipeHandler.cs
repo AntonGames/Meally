@@ -9,10 +9,7 @@ namespace MeallyApp.Resources.Services
         // This is a list of all recipes
         // Generic
 
-        public static Lazy<List<Recipe>> database = new Lazy<List<Recipe>>();
-
-        // This is path to database file
-        public static string DBPath = null;
+        private static Lazy<List<Recipe>> database = new Lazy<List<Recipe>>();
 
         // Get recipes from database
         public static async Task GetDBAsync()
