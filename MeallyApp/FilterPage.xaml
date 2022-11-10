@@ -16,10 +16,18 @@
     </Shell.TitleView>
     
     <Grid Padding="0,0,0,0"
-          RowDefinitions="100,*"
+          RowDefinitions="60,60,*"
           RowSpacing="0">
 
         <Button Grid.Row="0"
+                Margin="20,0,20,0"
+                HeightRequest="50"
+                Text="Exceptions" TextColor="#231F20" 
+                CornerRadius="10" 
+                BackgroundColor="#FFC439" 
+                Clicked="ExceptionLogButton_OnClicked"/>
+        
+        <Button Grid.Row="1"
                 Margin="20,0,20,0"
                 HeightRequest="50"
                 Text="Load" TextColor="#231F20" 
@@ -32,7 +40,7 @@
         <CollectionView x:Name="RecipeCollectionView"
                         ItemsSource="{Binding Recipes}"
                         BackgroundColor="Transparent"
-                        Grid.Row="1">
+                        Grid.Row="2">
             
             <CollectionView.ItemTemplate>
                 <DataTemplate x:DataType="model:Recipe">

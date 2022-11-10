@@ -1,4 +1,5 @@
 using MeallyApp.UserData;
+using MeallyApp.Resources;
 using MeallyApp.Resources.Services;
 using MeallyApp.Resources.ViewIngredients;
 
@@ -13,6 +14,11 @@ public partial class FilterPage : ContentPage
         InitializeComponent();
         BindingContext = viewModel;
         ViewModel = viewModel;
+    }
+
+    private void ExceptionLogButton_OnClicked(object sender, EventArgs e)
+    {
+        MeallyApp.Resources.ExceptionHandling.ExceptionLogger.ReadFromLog();
     }
 
     private async void RecipeButton_OnClicked(object sender, EventArgs e)
