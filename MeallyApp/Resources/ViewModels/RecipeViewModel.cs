@@ -43,7 +43,7 @@ namespace MeallyApp.Resources.ViewIngredients
             }
             catch (Exception)
             {
-                await Shell.Current.DisplayAlert("Error!", "Unable to display products.", "OK!");
+                ExceptionHandling.ExceptionLogger.WriteToLog("Unable to display recipes.");
             }
             finally
             {
