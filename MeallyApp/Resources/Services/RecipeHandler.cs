@@ -9,6 +9,7 @@ namespace MeallyApp.Resources.Services
         // This is a list of all recipes
         // Generic
 
+        // 2. lazy initialization usage
         private static Lazy<List<Recipe>> database = new Lazy<List<Recipe>>();
 
         // Get recipes from database
@@ -26,18 +27,26 @@ namespace MeallyApp.Resources.Services
 
             using var con = new NpgsqlConnection(cs);
 
-            await con.OpenAsync();
-            con.TypeMapper.UseJsonNet();
-            using (var cmd = new NpgsqlCommand(@"SELECT json_build_object('Name', Name, 'Image', Image, 'Compatibility', Compatibility, 'RecipeInstructions', RecipeInstructions, 'Ingredients', Ingredients) FROM ""Recipes"";", con))
-            using (var reader = await cmd.ExecuteReaderAsync())
+            try
             {
-                while (await reader.ReadAsync())
+                await con.OpenAsync();
+
+                con.TypeMapper.UseJsonNet();
+                using (var cmd = new NpgsqlCommand(@"SELECT json_build_object('Name', Name, 'Image', Image, 'Compatibility', Compatibility, 'RecipeInstructions', RecipeInstructions, 'Ingredients', Ingredients) FROM ""Recipes"";", con))
+                using (var reader = await cmd.ExecuteReaderAsync())
                 {
-                    var temp = reader.GetFieldValue<Recipe>(0);
-                    database.Value.Add(temp);
+                    while (await reader.ReadAsync())
+                    {
+                        var temp = reader.GetFieldValue<Recipe>(0);
+                        database.Value.Add(temp);
+                    }
                 }
+                con.Close();
             }
-            con.Close();
+            catch (System.Net.Sockets.SocketException)
+            {
+                ExceptionHandling.ExceptionLogger.WriteToLog("Couldn't connect to the database, check your internet connection.");
+            }
         }
 
         // Set Compatibility rating on Recipe list
