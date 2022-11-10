@@ -14,6 +14,7 @@ public partial class FilterPage : ContentPage
         InitializeComponent();
         BindingContext = viewModel;
         ViewModel = viewModel;
+        MeallyApp.Resources.ExceptionHandling.ExceptionLogger.ClearLog();
     }
 
     private void ExceptionLogButton_OnClicked(object sender, EventArgs e)
