@@ -22,7 +22,11 @@ public partial class FilterPage : ContentPage
         InitializeComponent();
         BindingContext = viewModel;
         ViewModel = viewModel;
-        ExceptionLogger.exceptionAddedToFile += Logger_OnException;  // added event handler method to an event
+        ExceptionLogger.exceptionAddedToFile += delegate (string message)  // added event handler method to an event
+        {
+            System.Diagnostics.Debug.WriteLine(message);
+        };
+
         action = ExceptionLogger.ClearLog;
         action();
     }
@@ -51,10 +55,5 @@ public partial class FilterPage : ContentPage
         base.OnAppearing();
 
         ViewModel.GetRecipesCommand.Execute(this);
-    }
-
-    private void Logger_OnException(string message)
-    {
-        System.Diagnostics.Debug.WriteLine(message);
     }
 }
