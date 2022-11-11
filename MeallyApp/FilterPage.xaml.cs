@@ -4,6 +4,7 @@ using MeallyApp.Resources.Services;
 using MeallyApp.Resources.ViewIngredients;
 using MeallyApp.Resources.ExceptionHandling;
 using Microsoft.Maui.Controls.Shapes;
+using MeallyApp.Resources.EventArguments;
 
 namespace MeallyApp;
 
@@ -22,11 +23,18 @@ public partial class FilterPage : ContentPage
         InitializeComponent();
         BindingContext = viewModel;
         ViewModel = viewModel;
-        ExceptionLogger.exceptionAddedToFile += delegate (string message)  // added event handler method to an event
+
+        //Subscribing to custom event
+        ExceptionLogger.exceptionAddedToFile += delegate (string message)  // added event handler method to a custom event
         {
             System.Diagnostics.Debug.WriteLine(message);
         };
 
+        //Subscribing to standart event
+        RecipeHandler.RecipesLoaded += delegate (object sender, RecipesLoadedEventArgs arguments)  // added even handler method to a standart event
+        {
+            System.Diagnostics.Debug.WriteLine("Standart event:  " + arguments.message);
+        };
         action = ExceptionLogger.ClearLog;
         action();
     }

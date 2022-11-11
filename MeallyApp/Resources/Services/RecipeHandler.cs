@@ -1,4 +1,5 @@
-﻿using MeallyApp.Resources.Ingredients;
+﻿using MeallyApp.Resources.EventArguments;
+using MeallyApp.Resources.Ingredients;
 using MeallyApp.UserData;
 using Npgsql;
 
@@ -11,6 +12,9 @@ namespace MeallyApp.Resources.Services
 
         // 2. lazy initialization usage
         private static Lazy<List<Recipe>> database = new Lazy<List<Recipe>>();
+
+        // 5. Standart event
+        public static event EventHandler<RecipesLoadedEventArgs> RecipesLoaded;
 
         // Get recipes from database
         public static async Task GetDBAsync()
@@ -42,6 +46,8 @@ namespace MeallyApp.Resources.Services
                     }
                 }
                 con.Close();
+                // invoking a standart event
+                RecipesLoaded(null, new RecipesLoadedEventArgs() { message = "All recipes loaded succesfully from the database." });
             }
             catch (System.Net.Sockets.SocketException)
             {
