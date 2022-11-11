@@ -2,6 +2,7 @@ using MeallyApp.UserData;
 using MeallyApp.Resources;
 using MeallyApp.Resources.Services;
 using MeallyApp.Resources.ViewIngredients;
+using MeallyApp.Resources.ExceptionHandling;
 
 namespace MeallyApp;
 
@@ -9,17 +10,24 @@ public partial class FilterPage : ContentPage
 {
     public RecipeViewModel ViewModel { get; }
 
+    // 4. Delegate usage
+    public delegate void ExceptionDelegate();
+
+    private ExceptionDelegate action; 
+
     public FilterPage(RecipeViewModel viewModel)
     {
         InitializeComponent();
         BindingContext = viewModel;
         ViewModel = viewModel;
-        MeallyApp.Resources.ExceptionHandling.ExceptionLogger.ClearLog();
+        action = ExceptionLogger.ClearLog;
+        action();
     }
 
     private void ExceptionLogButton_OnClicked(object sender, EventArgs e)
     {
-        MeallyApp.Resources.ExceptionHandling.ExceptionLogger.ReadFromLog();
+        action = ExceptionLogger.ReadFromLog;
+        action();
     }
 
     private async void RecipeButton_OnClicked(object sender, EventArgs e)
