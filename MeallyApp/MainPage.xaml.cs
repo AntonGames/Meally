@@ -24,7 +24,7 @@ public partial class MainPage : ContentPage
         if (IngridientView.SelectedItems != null)
         {
             // CollectionView returns IList<object>, code below casts IList<object> to List<Ingredients>
-            object tempObject = new Ingredient();
+            object tempObject;
 
             foreach (var o in IngridientView.SelectedItems)
             {
