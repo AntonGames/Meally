@@ -1,0 +1,35 @@
+﻿namespace MeallyApp.Resources.Ingredients
+{
+    public enum Ingredients
+    {
+        Spaghetti,
+        Butter,
+        Garlic,
+        Cheese,
+        Pepper,
+        CasterSugar,
+        Flour,
+        Eggs,
+        Lemon,
+        VanillaEssence,
+        LemonCurd,
+        OliveOil,
+        Bacon,
+        Onion,
+        Celery,
+        Carrot,
+        Beef,
+        Tomatoes,
+        Honey,
+        LasagneSheets,
+        Mozzarella,
+        Parmesan,
+        CremeFraiche,
+        Milk,
+        Salt,
+        Cucumber,
+        Coriander,
+        Potatoes,
+        Paprika
+    }
+}
