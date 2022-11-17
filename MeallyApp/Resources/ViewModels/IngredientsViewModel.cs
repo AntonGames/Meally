@@ -1,5 +1,7 @@
-﻿using MeallyApp.Resources.Ingredients;
+﻿using MeallyApp.Resources.ExceptionHandling;
+using MeallyApp.Resources.Ingredients;
 using MeallyApp.Resources.Services;
+using Microsoft.Extensions.Logging;
 using System.Collections.ObjectModel;
 
 
@@ -7,16 +9,19 @@ namespace MeallyApp.Resources.ViewIngredients
 {
     public partial class IngredientsViewModel : BaseViewModel
     {
-        IngredientService ingredientService;
+        IIngredientService ingredientService;
 
         public ObservableCollection<Ingredient> IngredientsCollection { get; } = new();
 
+        private IExceptionLogger logger;
+
         public Command GetIngredientsCommand { get; }
 
-        public IngredientsViewModel(IngredientService ingredientService)
+        public IngredientsViewModel(IIngredientService ingredientService, IExceptionLogger logger)
         {
             Title = "Ingredient Picker";
             this.ingredientService = ingredientService;
+            this.logger = logger;
             GetIngredientsCommand = new Command(async () => await GetIngredientAsync());
             GetIngredientsCommand.Execute(this);
         }
@@ -44,7 +49,7 @@ namespace MeallyApp.Resources.ViewIngredients
             }
             catch (Exception)
             {
-                ExceptionHandling.ExceptionLogger.WriteToLog("Unable to display products.");
+                logger.WriteToLog("Unable to display products.");
             }
             finally
             {
