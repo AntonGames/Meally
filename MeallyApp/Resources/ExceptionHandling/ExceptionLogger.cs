@@ -7,25 +7,26 @@ namespace MeallyApp.Resources.ExceptionHandling
 {
     public delegate void MyEventHandler(string value);
 
-    public static class ExceptionLogger
+    public class ExceptionLogger : IExceptionLogger
     {
-        private static string logFileName = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "Log.txt");
+        private readonly string logFileName = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "Log.txt");
 
         // 5. Custom event 
-        public static event MyEventHandler exceptionAddedToFile;
+        public event MyEventHandler exceptionAddedToFile;
 
-        public static void ClearLog()
+        public void ClearLog()
         {
             File.WriteAllText(logFileName, string.Empty);
         }
 
-        public static void WriteToLog(string message)
+        public void WriteToLog(string message)
         {
-            File.AppendAllText(logFileName, message + Environment.NewLine);
+            File.AppendAllText(logFileName, $"{message} [{DateTime.Now}]{Environment.NewLine}");
+            // invoked custom
             exceptionAddedToFile("New exception added: " + message);
         }
 
-        public static void ReadFromLog()
+        public void ReadFromLog()
         {
             if (File.Exists(logFileName))
             {
