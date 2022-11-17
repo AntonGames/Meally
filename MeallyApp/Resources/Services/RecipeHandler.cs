@@ -5,60 +5,29 @@ using Npgsql;
 
 namespace MeallyApp.Resources.Services
 {
-    public static class RecipeHandler
+    public class RecipeHandler : IRecipeHandler
     {
         // This is a list of all recipes
-        // Generic
 
-        // 2. lazy initialization usage
-        private static Lazy<List<Recipe>> database = new Lazy<List<Recipe>>();
+        private List<Recipe> database = new List<Recipe>();
 
-        // 5. Standart event
-        public static event EventHandler<RecipesLoadedEventArgs> RecipesLoaded;
+        public IDatabaseConnection dbConnection;
 
-        // Get recipes from database
-        public static async Task GetDBAsync()
+        public RecipeHandler(IDatabaseConnection databaseConnection)
         {
-            RecipeHandler.database.Value.Clear();
-         
-            // Setup bit.io database connection
-            var bitHost = "db.bit.io";
-            var bitUser = "";
-            var bitDbName = "LorryGailius/Meally";
-            var bitApiKey = "v2_3usyy_JDfAYxxp5xTy6SgPPGEiZF4";
+            dbConnection = databaseConnection;
+        }
 
-            var cs = $"Host={bitHost};Username={bitUser};Password={bitApiKey};Database={bitDbName}";
-
-            using var con = new NpgsqlConnection(cs);
-
-            try
-            {
-                await con.OpenAsync();
-
-                con.TypeMapper.UseJsonNet();
-                using (var cmd = new NpgsqlCommand(@"SELECT json_build_object('Name', Name, 'Image', Image, 'Compatibility', Compatibility, 'RecipeInstructions', RecipeInstructions, 'Ingredients', Ingredients) FROM ""Recipes"";", con))
-                using (var reader = await cmd.ExecuteReaderAsync())
-                {
-                    while (await reader.ReadAsync())
-                    {
-                        var temp = reader.GetFieldValue<Recipe>(0);
-                        database.Value.Add(temp);
-                    }
-                }
-                con.Close();
-                // invoking a standart event
-                RecipesLoaded(null, new RecipesLoadedEventArgs() { message = "All recipes loaded succesfully from the database." });
-            }
-            catch (System.Net.Sockets.SocketException)
-            {
-                ExceptionHandling.ExceptionLogger.WriteToLog("Couldn't connect to the database, check your internet connection.");
-            }
+        public async Task GetRecipesFromDB()
+        {
+            await dbConnection.GetDBAsync();
+            database = dbConnection.GetRecipeList();
         }
 
         // Set Compatibility rating on Recipe list
-        public static void SetComp(List<Ingredient> userIngredients)
+        public void SetComp(List<Ingredient> userIngredients)
         {
-            foreach (var recipe in database.Value)
+            foreach (var recipe in database)
             {
                 var missingIngredients = recipe.Ingredients.Where(a => !User.inventory.Exists(b => b.ingredient.Equals(a.ingredient))).ToList();
 
@@ -71,19 +40,19 @@ namespace MeallyApp.Resources.Services
 
         // Order list of recipes by compatibility
         // LINQ to Objects usage (methods and queries)
-        public static void OrderDB()
+        public void OrderDB()
         {
-            List<Recipe> tempList = database.Value.OrderByDescending(x => x.Compatibility).ToList();
-            for (int i = 0; i < database.Value.Count; i++)
+            List<Recipe> tempList = database.OrderByDescending(x => x.Compatibility).ToList();
+            for (int i = 0; i < database.Count; i++)
             {
-                database.Value[i] = tempList[i];
+                database[i] = tempList[i];
             }
         }
 
         // Print all recipes in database
-        public static void PrintDB()
+        public void PrintDB()
         {
-            foreach (var recipe in database.Value)
+            foreach (var recipe in database)
             {
                 Console.WriteLine($"[Name: {recipe.Name}] [Compatibility: {recipe.Compatibility}]\n");
                 recipe.Ingredients.ForEach(i => Console.Write("{0}\t", i));
@@ -91,17 +60,9 @@ namespace MeallyApp.Resources.Services
             }
         }
 
-        // 4. Extension method usage for recipe
-        public static void PrintRecipe(this Recipe recipe)
+        public List<Recipe> GetRecipeList()
         {
-            Console.WriteLine($"[Name: {recipe.Name}] [Compatibility: {recipe.Compatibility}]\n");
-            recipe.Ingredients.ForEach(i => Console.Write("{0}\t", i));
-            Console.WriteLine("\n\n");
-        }
-
-        public static List<Recipe> GetRecipeList()
-        {
-            return new List<Recipe>(database.Value);
+            return new List<Recipe>(database);
         }
 
     }
