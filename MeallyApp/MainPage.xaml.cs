@@ -9,10 +9,13 @@ public partial class MainPage : ContentPage
 {
     private List<Ingredient> selection = new List<Ingredient>();
 
-    public MainPage(IngredientsViewModel viewModel)
+    private IRecipeHandler recipeHandler;
+
+    public MainPage(IngredientsViewModel viewModel, IRecipeHandler recipeHandler)
     {
         InitializeComponent();
         BindingContext = viewModel;
+        this.recipeHandler = recipeHandler;
     }
     private void AddButton_OnClicked(object sender, EventArgs e)
     {
@@ -32,8 +35,8 @@ public partial class MainPage : ContentPage
 
             // Assign inventory and clear selection
             User.inventory = selection;
-            RecipeHandler.SetComp(User.inventory);
-            RecipeHandler.OrderDB();
+            recipeHandler.SetComp(User.inventory);
+            recipeHandler.OrderDB();
             IngridientView.SelectedItems.Clear();
 
             /*
