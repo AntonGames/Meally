@@ -1,4 +1,5 @@
 ﻿using CommunityToolkit.Mvvm.Input;
+using MeallyApp.Resources.ExceptionHandling;
 using MeallyApp.Resources.Ingredients;
 using MeallyApp.Resources.Services;
 using System.Collections.ObjectModel;
@@ -9,13 +10,16 @@ namespace MeallyApp.Resources.ViewIngredients
     {
         public ObservableCollection<Recipe> Recipes { get; } = new();
 
-
+        private IExceptionLogger logger;
+        private IRecipeHandler recipeHandler;
 
         public Command GetRecipesCommand { get; }
 
-        public RecipeViewModel()
+        public RecipeViewModel(IExceptionLogger logger, IRecipeHandler recipeHandler)
         {
             Title = "Recipes";
+            this.logger = logger;
+            this.recipeHandler = recipeHandler;
             GetRecipesCommand = new Command(async () => await GetRecipesAsync());
         }
 
@@ -29,7 +33,7 @@ namespace MeallyApp.Resources.ViewIngredients
             try
             {
                 IsBusy = true;
-                var recipes = RecipeHandler.GetRecipeList();
+                var recipes = recipeHandler.GetRecipeList();
 
                 if (Recipes.Count != 0)
                 {
@@ -43,7 +47,7 @@ namespace MeallyApp.Resources.ViewIngredients
             }
             catch (Exception)
             {
-                ExceptionHandling.ExceptionLogger.WriteToLog("Unable to display recipes.");
+                logger.WriteToLog("Unable to display recipes.");
             }
             finally
             {
