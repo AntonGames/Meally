@@ -2,7 +2,7 @@
 
 namespace MeallyApp.Resources.Services
 {
-    public class IngredientService
+    public class IngredientService : IIngredientService
     {
         private List<Ingredient> ingredientList = new ();
 
