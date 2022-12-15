@@ -6,14 +6,11 @@ namespace MeallyApp.Resources.Ingredients
     {
         public Ingredient() {;}
 
-        public Ingredient(Ingredients ingredient, string image)
+        public Ingredient(string DisplayName, string image)
         {
-            this.ingredient = ingredient;
-            DisplayName = this.ToString();
+            this.DisplayName = DisplayName;
             this.Image = image;
         }
-
-        public Ingredients ingredient { get; set; }
 
         public string DisplayName { get; set; } 
 
@@ -22,7 +19,7 @@ namespace MeallyApp.Resources.Ingredients
         // Regex usage
         public override string ToString()
         {
-            return Regex.Replace(ingredient.ToString(), "[a-z][A-Z]", m => $"{m.Value[0]} {char.ToLower(m.Value[1])}");
+            return DisplayName;
         }
 
     }

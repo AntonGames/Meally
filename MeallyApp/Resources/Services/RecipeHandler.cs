@@ -27,6 +27,7 @@ namespace MeallyApp.Resources.Services
         // Set Compatibility rating on Recipe list
         public void SetComp(List<Ingredient> userIngredients)
         {
+            /*
             foreach (var recipe in database)
             {
                 var missingIngredients = recipe.Ingredients.Where(a => !User.inventory.Exists(b => b.ingredient.Equals(a.ingredient))).ToList();
@@ -36,6 +37,7 @@ namespace MeallyApp.Resources.Services
 
                 recipe.Compatibility = Math.Round((recipeCount - missingCount) / recipeCount,2);
             }
+            */
         }
 
         // Order list of recipes by compatibility
