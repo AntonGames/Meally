@@ -12,9 +12,9 @@
     </ContentPage.Resources>
 
     <Shell.TitleView>
-        <Label Text="{Binding Title}" FontFamily="OpenSansSemibold" VerticalOptions="CenterAndExpand" HorizontalOptions="Start" TextColor="#231F20" FontSize="Title"  Margin="0,0,0,5"/>
+        <Label Text="{Binding Title}" FontFamily="OpenSansSemibold" VerticalOptions="CenterAndExpand" HorizontalOptions="Start" TextColor="#231F20" FontSize="Title"  Margin="50,0,0,5"/>
     </Shell.TitleView>
-    
+
     <Grid Padding="0,0,0,0"
           RowDefinitions="60,60,*"
           RowSpacing="0">
@@ -48,23 +48,26 @@
                     <!-- Template for CollectionView of Recipes -->
                     <Frame CornerRadius="10"
                            Grid.Row="1"
-                           HeightRequest="150"
-                           WidthRequest="350"
-                           Margin="0,0,0,10"
-                           >
+                           MinimumHeightRequest="150"
+                           MinimumWidthRequest="350"
+                           MaximumHeightRequest="300"
+                           BackgroundColor="#F5F5F5"
+                           Margin="25,0,25,10">
 
                         <Frame.GestureRecognizers>
                             <TapGestureRecognizer Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:RecipeViewModel}}, Path=TapCommand}"
                                                   CommandParameter="{Binding .}"/>
                         </Frame.GestureRecognizers>
 
-                        <Grid HeightRequest="150" 
-                              WidthRequest="350"
+                        <Grid MinimumHeightRequest="150"
+                              MinimumWidthRequest="350"
+                              MaximumHeightRequest="300"
                               ColumnDefinitions="150,150,*"
                               RowDefinitions="50,70,20,*"
+                              BackgroundColor="Transparent"
                               RowSpacing="0">
 
-                            <Frame CornerRadius="10" HeightRequest="120" WidthRequest="125" Grid.Column="0" Grid.RowSpan="4">
+                            <Frame CornerRadius="10" HeightRequest="120" WidthRequest="125" Grid.Column="0" Grid.RowSpan="4" BackgroundColor="Transparent">
                                 <Image Source="{Binding Image}" Aspect="AspectFill"/>
                             </Frame>
 
@@ -76,6 +79,7 @@
                                    Grid.Column="1"
                                    Grid.ColumnSpan="2"
                                    Grid.RowSpan="2"
+                                   LineBreakMode="MiddleTruncation"
                                    Margin="0,0,20,20"
                                    TextColor="#231F20"
                             />

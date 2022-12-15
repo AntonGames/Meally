@@ -9,11 +9,11 @@
     FlyoutBackgroundColor="#FFC439"
     Shell.ForegroundColor="#231F20"
     Shell.TitleColor="#231F20">
-    
+
     <Shell.FlyoutHeader>
         <Label Text="Meally" FontSize="50" HorizontalOptions="Center" VerticalOptions="Center" Margin="0,25,0,25"/>
     </Shell.FlyoutHeader>
-
+    
     <ShellContent
             Title="Main"
             ContentTemplate="{DataTemplate local:MainPage}"

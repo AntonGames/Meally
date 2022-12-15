@@ -5,7 +5,7 @@
              x:Class="MeallyApp.AboutPage">
 
     <Shell.TitleView>
-        <Label Text="About" FontFamily="OpenSansSemibold" VerticalOptions="CenterAndExpand" HorizontalOptions="Start" TextColor="#231F20" FontSize="20"  Margin="0,0,0,2"/>
+        <Label Text="About" FontFamily="OpenSansSemibold" VerticalOptions="CenterAndExpand" HorizontalOptions="Start" TextColor="#231F20" FontSize="20"  Margin="50,0,0,2"/>
     </Shell.TitleView>
 
     <VerticalStackLayout Spacing="20" VerticalOptions="Center">
