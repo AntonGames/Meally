@@ -29,7 +29,7 @@ namespace MeallyApp.Resources.Services
         {
             var client = new HttpClient();
 
-            string url = "https://localhost:44393/api/food/getrecipes";
+            string url = $"{User.BaseUrl}/api/food/getrecipes";
             client.BaseAddress = new Uri(url);
             HttpResponseMessage respone = await client.GetAsync("");
             if (respone.IsSuccessStatusCode)
