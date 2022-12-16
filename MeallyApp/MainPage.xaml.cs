@@ -39,14 +39,7 @@ public partial class MainPage : ContentPage
             recipeHandler.OrderDB();
             IngridientView.SelectedItems.Clear();
 
-            /*
-            // Used for individual item selection casting
-            // Change IngridientView.SelectedItems to IngridientView.SelectedItem
-            object o = new Ingredient();
-            o = (IngridientView.SelectedItem); 
-            Ingredient selection = o as Ingredient;
-            Console.WriteLine("Selected item is {0}", selection.Name);
-            */
+            // Add request for sending inventory to API
         }
     }
 }
