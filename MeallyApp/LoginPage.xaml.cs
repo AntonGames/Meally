@@ -17,11 +17,27 @@ public partial class LoginPage : ContentPage
 
     private async void LoginButton_OnClicked(object sender, EventArgs e) 
     {
-        var responseString = await "https://localhost:44393/api/user/verifyuser/?username=admin&password=admin"
-            .PostUrlEncodedAsync(new { username = "admin", password = "admin" })
-            .ReceiveString();
+        try
+        {
+            ErrorLine.TextColor = Colors.Transparent;
 
-        Debug.WriteLine("----------------------------------------" + responseString);
+            var responseString = await $"{User.BaseUrl}/api/user/verifyuser/?username={UsernameField.Text}&password={PasswordField.Text}"
+                                        .PostAsync()
+                                        .ReceiveString();
+
+
+            User.inventory = JsonConvert.DeserializeObject<List<Ingredient>>(responseString);
+
+            User.UserName = UsernameField.Text;
+
+            Application.Current.MainPage = new AppShell();
+        }
+        catch(FlurlHttpException ex)
+        {
+            ErrorLine.TextColor = Colors.Red;
+            Debug.WriteLine(ex.Message);
+        }
+
         // Clear user input
         UsernameField.Text = string.Empty;
         PasswordField.Text = string.Empty;
