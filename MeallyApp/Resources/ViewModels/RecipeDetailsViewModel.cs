@@ -9,6 +9,9 @@ namespace MeallyApp.Resources.ViewIngredients
         [ObservableProperty]
         Recipe recipe;
 
+		[ObservableProperty]
+		List<Ingredient> ingredients;
+
         public RecipeDetailsViewModel()
 		{
 

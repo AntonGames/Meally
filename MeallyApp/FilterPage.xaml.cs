@@ -56,7 +56,7 @@ public partial class FilterPage : ContentPage
         if (!Loader.IsRunning)
         {
             Loader.IsRunning = true;
-            await recipeHandler.GetRecipesFromDB();
+            await recipeHandler.GetRecipesAPI();
             recipeHandler.SetComp(User.inventory);
             recipeHandler.OrderDB();
             Loader.IsRunning = false;

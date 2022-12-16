@@ -1,4 +1,6 @@
 ﻿using MeallyApp.Resources.Ingredients;
+using Newtonsoft.Json;
+using System.Diagnostics;
 
 namespace MeallyApp.Resources.Services
 {
@@ -8,19 +10,38 @@ namespace MeallyApp.Resources.Services
 
         public IngredientService()
         {
-            ingredientList.Add(new Ingredient("Paprika", "IMG"));
+
         }
 
-        public List<Ingredient> GetIngredients()
+        public List<Ingredient> GetIngredientsList()
         {
-            if(ingredientList?.Count > 0)
+            ingredientList.Add(new Ingredient("Paprika", "IMG"));
+            return ingredientList;
+        }
+
+        public async Task<List<Ingredient>> GetIngredients()
+        {
+            var client = new HttpClient();
+
+            string url = "https://localhost:44393/api/food/getingredients";
+            client.BaseAddress = new Uri(url);
+            HttpResponseMessage respone = await client.GetAsync("");
+            if(respone.IsSuccessStatusCode)
             {
+                string content = respone.Content.ReadAsStringAsync().Result;
+                ingredientList = JsonConvert.DeserializeObject<List<Ingredient>>(content);
+
+                foreach (Ingredient A in ingredientList)
+                {
+
+                    Debug.WriteLine($"\n{A.DisplayName}\n");
+
+                }
+
                 return ingredientList;
             }
-            else
-            {
-                return null;
-            }
+
+            return null;
         }
     }
 }

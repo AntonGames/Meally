@@ -1,4 +1,9 @@
 using CommunityToolkit.Mvvm.Input;
+using Flurl.Http;
+using MeallyApp.Resources.Ingredients;
+using MeallyApp.UserData;
+using Newtonsoft.Json;
+using RestSharp;
 using System.Diagnostics;
 
 namespace MeallyApp;
@@ -10,11 +15,15 @@ public partial class LoginPage : ContentPage
 		InitializeComponent();
 	}
 
-    private void LoginButton_OnClicked(object sender, EventArgs e) 
+    private async void LoginButton_OnClicked(object sender, EventArgs e) 
     {
-		if(UsernameField.Text == "admin" & PasswordField.Text == "admin")
-		{
-            Application.Current.MainPage = new AppShell();
-        }
+        var responseString = await "https://localhost:44393/api/user/verifyuser/?username=admin&password=admin"
+            .PostUrlEncodedAsync(new { username = "admin", password = "admin" })
+            .ReceiveString();
+
+        Debug.WriteLine("----------------------------------------" + responseString);
+        // Clear user input
+        UsernameField.Text = string.Empty;
+        PasswordField.Text = string.Empty;
     }
 }

@@ -35,7 +35,7 @@ namespace MeallyApp.Resources.ViewIngredients
             try
             {
                 IsBusy = true;
-                var ingredients = ingredientService.GetIngredients();
+                var ingredients = await ingredientService.GetIngredients();
 
                 if (IngredientsCollection.Count != 0)
                 {

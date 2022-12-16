@@ -9,6 +9,6 @@ namespace MeallyApp.Resources.Services
 {
     public interface IIngredientService
     {
-        public List<Ingredient> GetIngredients();
+        public Task<List<Ingredient>> GetIngredients();
     }
 }
