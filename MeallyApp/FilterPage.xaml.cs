@@ -64,10 +64,23 @@ public partial class FilterPage : ContentPage
         }
     }
 
+    private async void Load_Recipes()
+    {
+        if (!Loader.IsRunning)
+        {
+            Loader.IsRunning = true;
+            await recipeHandler.GetRecipesAPI();
+            recipeHandler.SetComp(User.inventory);
+            recipeHandler.OrderDB();
+            Loader.IsRunning = false;
+            ViewModel.GetRecipesCommand.Execute(this);
+        }
+    }
+
     protected override void OnAppearing()
     {
         base.OnAppearing();
 
-        ViewModel.GetRecipesCommand.Execute(this);
+        Load_Recipes();
     }
 }
