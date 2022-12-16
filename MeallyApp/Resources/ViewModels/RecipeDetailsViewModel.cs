@@ -14,7 +14,7 @@ namespace MeallyApp.Resources.ViewIngredients
 
         public RecipeDetailsViewModel()
 		{
-
+			// Add "GET ingredients ?recipe" request
 
 
 		}
