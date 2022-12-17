@@ -17,5 +17,11 @@ namespace MeallyDBapi.Infrastructure
         public List<Ingredient>? VerifyUser(string username, string password);
 
         public void DeleteUserIngredients(string username);
+
+        public bool UpdateUserInventory(UserIngredientsRequest request);
+
+        public RecipeViewModel GetRecipe(int id);
+
+
     }
 }

@@ -9,6 +9,12 @@ namespace RecipeDatabaseDomain.Models
 {
     public class UserIngredient
     {
+        public UserIngredient(int userId, int ingredientId)
+        {
+            UserId = userId;
+            IngredientId = ingredientId;
+        }
+
         [Key]
         public int Id { get; set; }
 

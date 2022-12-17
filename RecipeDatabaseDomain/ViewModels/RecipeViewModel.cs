@@ -9,6 +9,7 @@ namespace RecipeDatabaseDomain.ViewModels
 {
     public class RecipeViewModel
     {
+        public int Id { get; set; }
         public string? Name { get; set; }
 
         public List<Ingredient>? Ingredients { get; set; }
@@ -17,12 +18,13 @@ namespace RecipeDatabaseDomain.ViewModels
 
         public string? Image { get; set; }
 
-        public RecipeViewModel(string name, List<Ingredient> ingredients, string recipeInstructions, string recipeImage = "place_holder.png")
+        public RecipeViewModel(Recipe recipe, List<Ingredient> ingredients)
         {
-            Name = name;
+            Id = recipe.Id;
+            Name = recipe.Name;
             Ingredients = ingredients;
-            RecipeInstructions = recipeInstructions;
-            Image = recipeImage;
+            RecipeInstructions = recipe.RecipeInstructions;
+            Image = recipe.Image;
         }
     }
 }

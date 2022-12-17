@@ -1,4 +1,5 @@
 ﻿using MeallyDBapi.Infrastructure;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -21,12 +22,17 @@ namespace MeallyDBapi.Controllers
             return Ok(_meallyDataRepository.GetAllIngredients());
         }
 
+        [Authorize]
         [HttpGet("GetRecipes")]
         public IActionResult GetRecipes()
         {
             return Ok(_meallyDataRepository.GetAllRecipes());
         }
 
-        
+        [HttpGet("GetRecipe/{id}")]
+        public IActionResult GetRecipe(int id)
+        {
+            return Ok(_meallyDataRepository.GetRecipe(id));
+        }
     }
 }

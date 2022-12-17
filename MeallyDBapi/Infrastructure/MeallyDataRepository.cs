@@ -30,10 +30,17 @@ namespace MeallyDBapi.Infrastructure
             for (int i = 0; i < recipes.Count; i++)
             {
                 List<Ingredient> ingredients = GetRecipeIngredients(recipes[i].Id);
-                recipeViewModels.Add(new RecipeViewModel(recipes[i].Name, ingredients, recipes[i].RecipeInstructions));
+                recipeViewModels.Add(new RecipeViewModel(recipes[i], ingredients));
             }
 
             return recipeViewModels;
+        }
+
+        public RecipeViewModel GetRecipe(int id)
+        {
+            Recipe recipe = context.Recipes.First(x => x.Id == id);
+            List<Ingredient> ingredients = GetRecipeIngredients(id);
+            return new RecipeViewModel(recipe, ingredients);
         }
 
         private List<Ingredient> GetRecipeIngredients(int recipeId)
@@ -144,13 +151,13 @@ namespace MeallyDBapi.Infrastructure
         public List<Ingredient>? VerifyUser(string username, string password)
         {
             UserAccount? acc = context.UserAccounts.FirstOrDefault(x => x.UserName == username);
-            Debug.WriteLine(acc.UserName + "   username acc");
             if (acc == null)
             {
                 return null;
             }
+            Debug.WriteLine(acc.UserName + "   username acc");
 
-            if(Verify(password, acc.Password))
+            if (Verify(password, acc.Password))
             {
                 Debug.WriteLine("tesingas");
                 return GetUserInventory(acc.UserID);
@@ -179,5 +186,31 @@ namespace MeallyDBapi.Infrastructure
         {
             return context.UserIngredients.Where(x => x.UserId == UserId).ToList();
         }
+
+        public bool UpdateUserInventory(UserIngredientsRequest request)
+        {
+            int UserId = GetUserIdByUsername(request.Username);
+            int count = 0;
+            for (int i = 0; i < request.Ingredients.Count; i++)
+            {
+                if (context.UserIngredients.Add(new UserIngredient(UserId, request.Ingredients[i].Id)) != null)
+                {
+                    count++;
+                }
+            }
+
+            context.SaveChanges();
+
+            if (count == request.Ingredients.Count)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        
     }
 }

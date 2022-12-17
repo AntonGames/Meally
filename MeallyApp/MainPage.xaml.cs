@@ -2,6 +2,7 @@
 using MeallyApp.Resources.Ingredients;
 using MeallyApp.UserData;
 using MeallyApp.Resources.Services;
+using Flurl.Http;
 
 namespace MeallyApp;
 
@@ -17,7 +18,7 @@ public partial class MainPage : ContentPage
         BindingContext = viewModel;
         this.recipeHandler = recipeHandler;
     }
-    private void AddButton_OnClicked(object sender, EventArgs e)
+    private async void AddButton_OnClicked(object sender, EventArgs e)
     {
         selection.Clear();
 
@@ -40,6 +41,12 @@ public partial class MainPage : ContentPage
             IngridientView.SelectedItems.Clear();
 
             // Add request for sending inventory to API
+            var result = await "https://localhost:44393/api/user/updateinventory".PostJsonAsync(new
+            {
+                Username = User.UserName,
+                Ingredients = new List<Ingredient>(User.inventory)
+            });
+            //result RETURNS StatusCode.200K if everything ok and StatusCode.404 if somtehing went wrong.
         }
     }
 }

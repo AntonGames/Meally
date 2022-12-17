@@ -32,13 +32,20 @@ namespace MeallyDBapi.Controllers
                 return NotFound();
             }
         }
-        /*
         [HttpPost("UpdateInventory")]
-        public IActionResult UpdateInv(string username, [FromBody]List<object> list)
+        public IActionResult UpdateInv([FromBody]UserIngredientsRequest request)
         {
-            repository.DeleteUserIngredients(username);
-        }
-        */
-        
+            repository.DeleteUserIngredients(request.Username);
+            bool result = repository.UpdateUserInventory(request);
+            
+            if (result)
+            {
+                return Ok();
+            }
+            else
+            {
+                return NotFound();
+            }
+        }        
     }
 }

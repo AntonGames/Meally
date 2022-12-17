@@ -6,7 +6,7 @@ namespace MeallyApp.UserData
 {
     public static class User
     {
-        public static string BaseUrl = "https://localhost:7282";
+        public static string BaseUrl = "https://localhost:44393";
 
         public static string UserName;
 
