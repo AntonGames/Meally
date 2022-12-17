@@ -1,4 +1,8 @@
+using Autofac;
+using Autofac.Extensions.DependencyInjection;
+using Autofac.Extras.DynamicProxy;
 using MeallyDBapi.Infrastructure;
+using MeallyDBapi.Interceptors;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -8,6 +12,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Options;
 using RecipeDatabaseDomain;
+using Serilog;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -37,6 +42,18 @@ namespace MeallyAPI
             services.AddCors();
             services.AddDistributedMemoryCache();
             services.AddSession();
+        }
+
+        public void ConfigureContainer(ContainerBuilder builder)
+        {
+
+            builder.RegisterType<MeallyDataRepository>().As<IMeallyDataRepository>()
+                .EnableInterfaceInterceptors().InterceptedBy(typeof(LogInterceptor))
+                .InstancePerDependency();
+
+            builder.RegisterType<RecipeContext>();
+           // builder.Register(x => Consol).SingleInstance();
+            builder.RegisterType<LogInterceptor>().SingleInstance();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
