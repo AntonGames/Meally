@@ -2,6 +2,7 @@
 using MeallyApp.Resources.ExceptionHandling;
 using MeallyApp.Resources.Services;
 using MeallyApp.Resources.ViewIngredients;
+using MeallyApp.Resources.ViewModels;
 
 namespace MeallyApp;
 
@@ -18,7 +19,11 @@ public static class MauiProgram
 				fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
 			});
 
-		builder.Services.AddSingleton<IIngredientService, IngredientService>();
+        builder.Services.AddSingleton<LoginPage>();
+
+        builder.Services.AddSingleton<LoginPageViewModel>();
+
+        builder.Services.AddSingleton<IIngredientService, IngredientService>();
 
 		builder.Services.AddSingleton<IngredientsViewModel>();
 

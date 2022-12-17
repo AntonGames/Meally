@@ -23,7 +23,7 @@ namespace MeallyApp.Resources.ExceptionHandling
         {
             File.AppendAllText(logFileName, $"{message} [{DateTime.Now}]{Environment.NewLine}");
             // invoked custom
-            exceptionAddedToFile("New exception added: " + message);
+            //exceptionAddedToFile("New exception added: " + message);
         }
 
         public void ReadFromLog()

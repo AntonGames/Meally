@@ -1,6 +1,7 @@
 ﻿using MeallyApp.Resources.EventArguments;
 using MeallyApp.Resources.Ingredients;
 using MeallyApp.UserData;
+using Newtonsoft.Json;
 using Npgsql;
 
 namespace MeallyApp.Resources.Services
@@ -24,18 +25,34 @@ namespace MeallyApp.Resources.Services
             database = dbConnection.GetRecipeList();
         }
 
+        public async Task GetRecipesAPI()
+        {
+            var client = new HttpClient();
+
+            string url = $"{User.BaseUrl}/api/food/getrecipes";
+            client.BaseAddress = new Uri(url);
+            HttpResponseMessage respone = await client.GetAsync("");
+            if (respone.IsSuccessStatusCode)
+            {
+                string content = respone.Content.ReadAsStringAsync().Result;
+                database = JsonConvert.DeserializeObject<List<Recipe>>(content);
+            }
+        }
+
         // Set Compatibility rating on Recipe list
         public void SetComp(List<Ingredient> userIngredients)
         {
+
             foreach (var recipe in database)
             {
-                var missingIngredients = recipe.Ingredients.Where(a => !User.inventory.Exists(b => b.ingredient.Equals(a.ingredient))).ToList();
+                var missingIngredients = recipe.Ingredients.Where(a => !User.inventory.Exists(b => b.DisplayName.Equals(a.DisplayName))).ToList();
 
                 double recipeCount = recipe.Ingredients.Count;
                 double missingCount = missingIngredients.Count;
 
                 recipe.Compatibility = Math.Round((recipeCount - missingCount) / recipeCount,2);
             }
+
         }
 
         // Order list of recipes by compatibility

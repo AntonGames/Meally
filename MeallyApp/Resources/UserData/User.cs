@@ -1,39 +1,24 @@
-﻿using MeallyApp.Resources.Ingredients;
+﻿using Flurl.Http.Configuration;
+using MeallyApp.Resources.Ingredients;
+using System.Diagnostics;
 
 namespace MeallyApp.UserData
 {
     public static class User
     {
+        public static string BaseUrl = "https://localhost:44393";
+
+        public static string UserName;
+
         public static List<Ingredient> inventory = new List<Ingredient>();
 
         public static void PrintInv()
         {
-            foreach (var ing in inventory)
+            foreach(Ingredient A in inventory)
             {
-                Console.WriteLine(ing.ingredient.ToString());
+                Debug.WriteLine(A);
             }
         }
-
-        //Add ingridients to inventory (for testing purposes only)
-        public static void AddInv()
-        {
-            inventory.Add(new Ingredient(Ingredients.Spaghetti, "IMG"));
-            inventory.Add(new Ingredient(Ingredients.Butter, "IMG"));
-            inventory.Add(new Ingredient(Ingredients.Garlic, "IMG"));
-            inventory.Add(new Ingredient(Ingredients.Cheese, "IMG"));
-            inventory.Add(new Ingredient(Ingredients.Pepper, "IMG"));
-            inventory.Add(new Ingredient(Ingredients.CasterSugar, "IMG"));
-            inventory.Add(new Ingredient(Ingredients.Flour, "IMG"));
-            inventory.Add(new Ingredient(Ingredients.Eggs, "IMG"));
-            inventory.Add(new Ingredient(Ingredients.Lemon, "IMG"));
-            inventory.Add(new Ingredient(Ingredients.VanillaEssence, "IMG"));
-            inventory.Add(new Ingredient(Ingredients.LemonCurd, "IMG"));
-            inventory.Add(new Ingredient(Ingredients.OliveOil, "IMG"));
-            inventory.Add(new Ingredient(Ingredients.Bacon, "IMG"));
-            inventory.Add(new Ingredient(Ingredients.Onion, "IMG"));
-            inventory.Add(new Ingredient(Ingredients.Celery, "IMG"));
-        }
-
 
     }
 }

@@ -56,7 +56,20 @@ public partial class FilterPage : ContentPage
         if (!Loader.IsRunning)
         {
             Loader.IsRunning = true;
-            await recipeHandler.GetRecipesFromDB();
+            await recipeHandler.GetRecipesAPI();
+            recipeHandler.SetComp(User.inventory);
+            recipeHandler.OrderDB();
+            Loader.IsRunning = false;
+            ViewModel.GetRecipesCommand.Execute(this);
+        }
+    }
+
+    private async void Load_Recipes()
+    {
+        if (!Loader.IsRunning)
+        {
+            Loader.IsRunning = true;
+            await recipeHandler.GetRecipesAPI();
             recipeHandler.SetComp(User.inventory);
             recipeHandler.OrderDB();
             Loader.IsRunning = false;
@@ -68,6 +81,6 @@ public partial class FilterPage : ContentPage
     {
         base.OnAppearing();
 
-        ViewModel.GetRecipesCommand.Execute(this);
+        Load_Recipes();
     }
 }

@@ -11,6 +11,7 @@ namespace MeallyApp.Resources.Services
     {
         public Task GetRecipesFromDB();
         public void SetComp(List<Ingredient> userIngredients);
+        public Task GetRecipesAPI();
         public void OrderDB();
         public void PrintDB();
         public List<Recipe> GetRecipeList();

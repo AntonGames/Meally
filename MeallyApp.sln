@@ -5,9 +5,13 @@ VisualStudioVersion = 17.3.32901.215
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MeallyApp", "MeallyApp\MeallyApp.csproj", "{9D3049DA-7A87-4421-B518-1A8BFC24449A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MeallyAppTests", "MeallyAppTests\MeallyAppTests.csproj", "{555D91DC-FB6D-4792-B2B7-F74FEFB96D18}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MeallyAppTests", "MeallyAppTests\MeallyAppTests.csproj", "{555D91DC-FB6D-4792-B2B7-F74FEFB96D18}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MeallyAppFunctionalityForTesting", "MeallyAppFunctionalityForTesting\MeallyAppFunctionalityForTesting.csproj", "{3F835DE5-79F1-4664-B882-985C5D7BAC3B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MeallyAppFunctionalityForTesting", "MeallyAppFunctionalityForTesting\MeallyAppFunctionalityForTesting.csproj", "{3F835DE5-79F1-4664-B882-985C5D7BAC3B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RecipeDatabaseDomain", "RecipeDatabaseDomain\RecipeDatabaseDomain.csproj", "{CFE22EDB-4BBE-475C-AE7D-67BBFDFF17A4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MeallyDBapi", "MeallyDBapi\MeallyDBapi.csproj", "{BEBE9DB0-B174-42C4-BBA2-9728A2EB0091}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,6 +33,14 @@ Global
 		{3F835DE5-79F1-4664-B882-985C5D7BAC3B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3F835DE5-79F1-4664-B882-985C5D7BAC3B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3F835DE5-79F1-4664-B882-985C5D7BAC3B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CFE22EDB-4BBE-475C-AE7D-67BBFDFF17A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CFE22EDB-4BBE-475C-AE7D-67BBFDFF17A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CFE22EDB-4BBE-475C-AE7D-67BBFDFF17A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CFE22EDB-4BBE-475C-AE7D-67BBFDFF17A4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BEBE9DB0-B174-42C4-BBA2-9728A2EB0091}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BEBE9DB0-B174-42C4-BBA2-9728A2EB0091}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BEBE9DB0-B174-42C4-BBA2-9728A2EB0091}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BEBE9DB0-B174-42C4-BBA2-9728A2EB0091}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

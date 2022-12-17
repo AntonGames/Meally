@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MeallyApp.LoginPage"
+             Title="LoginPage"
+             >
+    <VerticalStackLayout>
+
+
+        <Label TextColor="#FFC439" Text="Meally" FontSize="100" HorizontalOptions="Center" VerticalOptions="Center" Margin="0,50,0,0"/>
+
+        <Label x:Name="ErrorLine" TextColor="Transparent" Text="Username or pasword is incorrect!" FontSize="24" HorizontalOptions="Center" VerticalOptions="Center" Margin="0,90,0,0"/>
+
+        <Frame BackgroundColor="#F5F5F5"
+               CornerRadius="10"
+               Margin="20,10,20,0"
+               WidthRequest="500"
+               Padding="10"
+               BorderColor="#FFC439">
+
+            <Entry x:Name="UsernameField"
+               Placeholder="Username"
+               PlaceholderColor="Gray"
+               TextColor="Black"
+               WidthRequest="500"
+               IsPassword="False"/>
+        </Frame>
+
+
+
+        <Frame BackgroundColor="#F5F5F5"
+               CornerRadius="10"
+               Margin="20,20,20,0"
+               WidthRequest="500"
+               Padding="10"
+               BorderColor="#FFC439">
+
+            <Entry x:Name="PasswordField"
+               Placeholder="Password"
+               TextColor="Black"
+               WidthRequest="500"
+               PlaceholderColor="Gray"
+               IsPassword="True"/>
+        </Frame>
+
+
+        <Button x:Name="AddButton" 
+                Margin="0,25,0,0"
+                HeightRequest="50"
+                WidthRequest="500"
+                Text="Login" TextColor="#231F20" 
+                CornerRadius="10" 
+                BackgroundColor="#FFC439" 
+                Clicked="LoginButton_OnClicked"/>
+
+    </VerticalStackLayout>
+</ContentPage>
