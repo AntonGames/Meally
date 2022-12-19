@@ -22,7 +22,6 @@ namespace MeallyDBapi.Controllers
             return Ok(_meallyDataRepository.GetAllIngredients());
         }
 
-        [Authorize]
         [HttpGet("GetRecipes")]
         public IActionResult GetRecipes()
         {

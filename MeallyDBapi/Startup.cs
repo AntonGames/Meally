@@ -78,8 +78,6 @@ namespace MeallyAPI
 
             app.UseCors();
 
-            app.UseAuthorization();
-
             app.UseEndpoints(endpoints =>
             {
          
