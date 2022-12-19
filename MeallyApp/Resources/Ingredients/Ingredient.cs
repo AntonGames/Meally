@@ -2,7 +2,7 @@
 
 namespace MeallyApp.Resources.Ingredients
 {
-    public class Ingredient
+    public class Ingredient : IEquatable<Ingredient>
     {
         public Ingredient() {;}
 
@@ -17,6 +17,12 @@ namespace MeallyApp.Resources.Ingredients
         public string DisplayName { get; set; } 
 
         public string Image { get; set; }
+
+        public bool Equals(Ingredient other)
+        {
+            if (DisplayName == other.DisplayName) { return true; }
+            return false;   
+        }
 
         // Regex usage
         public override string ToString()
