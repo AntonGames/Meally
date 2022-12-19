@@ -13,9 +13,9 @@ namespace MeallyApp.Resources.Converters
             }
             //replace \n and \r as &#x0a;
 
-            value = value.ToString().Replace("\r\n", Environment.NewLine);
-            value = value.ToString().Replace("\n", Environment.NewLine);
-            value = value.ToString().Replace("\r", Environment.NewLine);
+            value = value.ToString().Replace("\r\n", $"{Environment.NewLine}{Environment.NewLine}");
+            value = value.ToString().Replace("\n", $"{Environment.NewLine}{Environment.NewLine}");
+            value = value.ToString().Replace("\r", $"{Environment.NewLine}{Environment.NewLine}");
 
             return value;
         }
