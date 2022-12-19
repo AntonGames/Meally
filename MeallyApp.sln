@@ -11,7 +11,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MeallyAppFunctionalityForTe
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RecipeDatabaseDomain", "RecipeDatabaseDomain\RecipeDatabaseDomain.csproj", "{CFE22EDB-4BBE-475C-AE7D-67BBFDFF17A4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MeallyDBapi", "MeallyDBapi\MeallyDBapi.csproj", "{BEBE9DB0-B174-42C4-BBA2-9728A2EB0091}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MeallyDBapi", "MeallyDBapi\MeallyDBapi.csproj", "{BEBE9DB0-B174-42C4-BBA2-9728A2EB0091}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "API.Test", "APITest\API.Test.csproj", "{51CB434B-6BF4-4EC9-87B1-458B4E10B385}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,6 +43,10 @@ Global
 		{BEBE9DB0-B174-42C4-BBA2-9728A2EB0091}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BEBE9DB0-B174-42C4-BBA2-9728A2EB0091}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BEBE9DB0-B174-42C4-BBA2-9728A2EB0091}.Release|Any CPU.Build.0 = Release|Any CPU
+		{51CB434B-6BF4-4EC9-87B1-458B4E10B385}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{51CB434B-6BF4-4EC9-87B1-458B4E10B385}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{51CB434B-6BF4-4EC9-87B1-458B4E10B385}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{51CB434B-6BF4-4EC9-87B1-458B4E10B385}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
