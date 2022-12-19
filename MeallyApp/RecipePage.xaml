@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:viewmodel="clr-namespace:MeallyApp.Resources.ViewIngredients"
              x:DataType="viewmodel:RecipeDetailsViewModel"
+             xmlns:model="clr-namespace:MeallyApp.Resources.Ingredients"
              xmlns:Converter="clr-namespace:MeallyApp.Resources.Converters"
              x:Class="MeallyApp.RecipePage"
              Title="">
@@ -10,13 +11,14 @@
     <ContentPage.Resources>
         <Converter:DoubleToPercentageConverter x:Key="DoubleToPercentage"/>
         <Converter:InstructionsToXAMLConverter x:Key="InstructionsToXAML"/>
+        <Converter:IngredientToColor x:Key="IngredientColor"/>
     </ContentPage.Resources>
 
     <ScrollView>
         <StackLayout Padding="25,0,25,0">
 
             <Frame HeightRequest="200" BackgroundColor="#FAF9F7" Padding="0" CornerRadius="10">
-                <Image Source="{Binding Recipe.Image}" Aspect="AspectFill"/>
+                <Image Source="place_holder.png" Aspect="AspectFit"/>
             </Frame>
 
             <Label Text="{Binding Recipe.Name}" TextColor="#231F20" FontSize="Title"
@@ -26,18 +28,46 @@
             <BoxView Color="#FFC439"
              CornerRadius="10"
              Margin="50,5,50,5"
-             HeightRequest="5"
+             HeightRequest="20"
              VerticalOptions="Center"
              HorizontalOptions="Center" />
 
             <Label Text="{Binding Recipe.Compatibility, Converter={StaticResource DoubleToPercentage}}" TextColor="#231F20" FontSize="Body"
             HorizontalOptions="Center" VerticalOptions="End" Margin="0,0,0,8"/>
 
-            <ListView ItemsSource="{Binding Recipe.Ingredients}" SelectionMode="None" HorizontalOptions="Center" Background="Black"/>
+            <Frame CornerRadius="10"
+                   BackgroundColor="#F5F5F5">
+                
+            <CollectionView x:Name="IngridientView"
+                            MaximumHeightRequest="450"
+                            Margin="25,0,25,0"
+                            BackgroundColor="Transparent"
+                            ItemsLayout="VerticalGrid, 3"
+                            ItemsSource="{Binding Ingredients}"
+                            SelectionMode="None">
+
+                <CollectionView.ItemTemplate>
+
+                    <DataTemplate x:DataType="model:Ingredient">
+
+
+
+                            <Label Text="{Binding DisplayName}" TextColor="{Binding ., Converter={StaticResource IngredientColor}}"/>
+
+                        </DataTemplate>
+                    
+                    
+                </CollectionView.ItemTemplate>
+                
+
+            </CollectionView>
+
+            </Frame>
+
 
             <Label Text="{Binding Recipe.RecipeInstructions, Converter={StaticResource InstructionsToXAML}}" TextColor="#231F20" 
             FontSize="Body"
-            HorizontalOptions="Center" VerticalOptions="Center" Margin="10,0,10,50"/>
+            HorizontalOptions="Center" VerticalOptions="Center" Margin="10,25,10,50"/>
 
 
         </StackLayout>
