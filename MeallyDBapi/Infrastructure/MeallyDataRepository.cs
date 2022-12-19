@@ -36,11 +36,11 @@ namespace MeallyDBapi.Infrastructure
             return recipeViewModels;
         }
 
-        public RecipeViewModel GetRecipe(int id)
+        public List<Ingredient> GetRecipe(int id)
         {
             Recipe recipe = context.Recipes.First(x => x.Id == id);
             List<Ingredient> ingredients = GetRecipeIngredients(id);
-            return new RecipeViewModel(recipe, ingredients);
+            return ingredients;
         }
 
         private List<Ingredient> GetRecipeIngredients(int recipeId)

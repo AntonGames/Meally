@@ -20,7 +20,7 @@ namespace MeallyDBapi.Infrastructure
 
         public bool UpdateUserInventory(UserIngredientsRequest request);
 
-        public RecipeViewModel GetRecipe(int id);
+        public List<Ingredient> GetRecipe(int id);
 
 
     }
